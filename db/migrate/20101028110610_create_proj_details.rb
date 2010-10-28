@@ -5,25 +5,25 @@ class CreateProjDetails < ActiveRecord::Migration
       t.integer :PercentageProgress
       t.decimal :PlannedValue
       t.decimal :EarnedValue
-      t.float :ActualCost
+      t.decimal :ActualCost
       t.decimal :LRESite
       t.decimal :LREPmc
-      t.float :CPI
-      t.float :SPI
+      t.decimal :CPI
+      t.decimal :SPI
       t.decimal :MileStoneBilled
       t.decimal :MileStoneUnbilled
       t.decimal :InternalIssues
       t.decimal :ExternalIssues
       t.decimal :QualityIndex
       t.decimal :HSCIndex
-      t.float :ProcuredAsphant
-      t.float :BilledAsphant
-      t.float :ProcuredConcrete
-      t.float :BilledConcrete
-      t.float :ProcuredHSteal
-      t.float :BilledHSteal
-      t.float :ProcuredRSteal
-      t.float :BilledRSteal
+      t.decimal :ProcuredAsphant
+      t.decimal :BilledAsphant
+      t.decimal :ProcuredConcrete
+      t.decimal :BilledConcrete
+      t.decimal :ProcuredHSteal
+      t.decimal :BilledHSteal
+      t.decimal :ProcuredRSteal
+      t.decimal :BilledRSteal
       t.integer :MachineAvailability
       t.integer :MachineUsed
       t.integer :ManpowerAvailability
