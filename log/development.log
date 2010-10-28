@@ -1,0 +1,41 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (169.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjectDetails (20101028094959)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (60.0ms)[0m   [0mCREATE TABLE "project_details" ("id" serial primary key, "month" date, "location" character varying(255), "PlannedValue" integer, "LREContract" integer, "LREPmc" integer, "ContractorIndex" integer, "CPI" float, "SPI" float, "MileStonebuild" integer, "MileStoneUnbuild" integer, "IssuesInternal" integer, "IssuesExternal" integer, "QualityIndex" integer, "HSCIndex" integer, "MaterialAsphant" float, "MaterialConcrete" float, "MaterialHSteal" float, "MaterialRSteal" float, "MachineAvailable" integer, "MachineUsed" integer, "MenAvailable" integer, "MenUsed" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101028094959')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjectDetailsController#index (for 127.0.0.1 at 2010-10-28 15:25:06) [GET]
+  [4;35;1mProjectDetail Load (2.0ms)[0m   [0mSELECT * FROM "project_details" [0m
+Rendering template within layouts/project_details
+Rendering project_details/index
+Completed in 6662ms (View: 6654, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjectDetailsController#new (for 127.0.0.1 at 2010-10-28 15:25:20) [GET]
+Rendering template within layouts/project_details
+Rendering project_details/new
+Completed in 193ms (View: 183, DB: 0) | 200 OK [http://localhost/project_details/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjectDetailsController#index (for 127.0.0.1 at 2010-10-28 15:25:37) [GET]
+  [4;36;1mProjectDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "project_details" [0m
+Rendering template within layouts/project_details
+Rendering project_details/index
+Completed in 9ms (View: 2, DB: 3) | 200 OK [http://localhost/project_details]

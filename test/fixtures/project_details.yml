@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  month: 2010-10-28
+  location: MyString
+  PlannedValue: 1
+  LREContract: 1
+  LREPmc: 1
+  ContractorIndex: 1
+  CPI: 1.5
+  SPI: 1.5
+  MileStonebuild: 1
+  MileStoneUnbuild: 1
+  IssuesInternal: 1
+  IssuesExternal: 1
+  QualityIndex: 1
+  HSCIndex: 1
+  MaterialAsphant: 1.5
+  MaterialConcrete: 1.5
+  MaterialHSteal: 1.5
+  MaterialRSteal: 1.5
+  MachineAvailable: 1
+  MachineUsed: 1
+  MenAvailable: 1
+  MenUsed: 1
+
+two:
+  month: 2010-10-28
+  location: MyString
+  PlannedValue: 1
+  LREContract: 1
+  LREPmc: 1
+  ContractorIndex: 1
+  CPI: 1.5
+  SPI: 1.5
+  MileStonebuild: 1
+  MileStoneUnbuild: 1
+  IssuesInternal: 1
+  IssuesExternal: 1
+  QualityIndex: 1
+  HSCIndex: 1
+  MaterialAsphant: 1.5
+  MaterialConcrete: 1.5
+  MaterialHSteal: 1.5
+  MaterialRSteal: 1.5
+  MachineAvailable: 1
+  MachineUsed: 1
+  MenAvailable: 1
+  MenUsed: 1

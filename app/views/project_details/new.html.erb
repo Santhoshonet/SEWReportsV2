@@ -1,0 +1,99 @@
+<h1>New project_detail</h1>
+
+<% form_for(@project_detail) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :month %><br />
+    <%= f.date_select :month %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :PlannedValue %><br />
+    <%= f.text_field :PlannedValue %>
+  </p>
+  <p>
+    <%= f.label :LREContract %><br />
+    <%= f.text_field :LREContract %>
+  </p>
+  <p>
+    <%= f.label :LREPmc %><br />
+    <%= f.text_field :LREPmc %>
+  </p>
+  <p>
+    <%= f.label :ContractorIndex %><br />
+    <%= f.text_field :ContractorIndex %>
+  </p>
+  <p>
+    <%= f.label :CPI %><br />
+    <%= f.text_field :CPI %>
+  </p>
+  <p>
+    <%= f.label :SPI %><br />
+    <%= f.text_field :SPI %>
+  </p>
+  <p>
+    <%= f.label :MileStonebuild %><br />
+    <%= f.text_field :MileStonebuild %>
+  </p>
+  <p>
+    <%= f.label :MileStoneUnbuild %><br />
+    <%= f.text_field :MileStoneUnbuild %>
+  </p>
+  <p>
+    <%= f.label :IssuesInternal %><br />
+    <%= f.text_field :IssuesInternal %>
+  </p>
+  <p>
+    <%= f.label :IssuesExternal %><br />
+    <%= f.text_field :IssuesExternal %>
+  </p>
+  <p>
+    <%= f.label :QualityIndex %><br />
+    <%= f.text_field :QualityIndex %>
+  </p>
+  <p>
+    <%= f.label :HSCIndex %><br />
+    <%= f.text_field :HSCIndex %>
+  </p>
+  <p>
+    <%= f.label :MaterialAsphant %><br />
+    <%= f.text_field :MaterialAsphant %>
+  </p>
+  <p>
+    <%= f.label :MaterialConcrete %><br />
+    <%= f.text_field :MaterialConcrete %>
+  </p>
+  <p>
+    <%= f.label :MaterialHSteal %><br />
+    <%= f.text_field :MaterialHSteal %>
+  </p>
+  <p>
+    <%= f.label :MaterialRSteal %><br />
+    <%= f.text_field :MaterialRSteal %>
+  </p>
+  <p>
+    <%= f.label :MachineAvailable %><br />
+    <%= f.text_field :MachineAvailable %>
+  </p>
+  <p>
+    <%= f.label :MachineUsed %><br />
+    <%= f.text_field :MachineUsed %>
+  </p>
+  <p>
+    <%= f.label :MenAvailable %><br />
+    <%= f.text_field :MenAvailable %>
+  </p>
+  <p>
+    <%= f.label :MenUsed %><br />
+    <%= f.text_field :MenUsed %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', project_details_path %>

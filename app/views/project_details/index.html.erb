@@ -1,0 +1,62 @@
+<h1>Listing project_details</h1>
+
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Location</th>
+    <th>Plannedvalue</th>
+    <th>Lrecontract</th>
+    <th>Lrepmc</th>
+    <th>Contractorindex</th>
+    <th>Cpi</th>
+    <th>Spi</th>
+    <th>Milestonebuild</th>
+    <th>Milestoneunbuild</th>
+    <th>Issuesinternal</th>
+    <th>Issuesexternal</th>
+    <th>Qualityindex</th>
+    <th>Hscindex</th>
+    <th>Materialasphant</th>
+    <th>Materialconcrete</th>
+    <th>Materialhsteal</th>
+    <th>Materialrsteal</th>
+    <th>Machineavailable</th>
+    <th>Machineused</th>
+    <th>Menavailable</th>
+    <th>Menused</th>
+  </tr>
+
+<% @project_details.each do |project_detail| %>
+  <tr>
+    <td><%=h project_detail.month %></td>
+    <td><%=h project_detail.location %></td>
+    <td><%=h project_detail.PlannedValue %></td>
+    <td><%=h project_detail.LREContract %></td>
+    <td><%=h project_detail.LREPmc %></td>
+    <td><%=h project_detail.ContractorIndex %></td>
+    <td><%=h project_detail.CPI %></td>
+    <td><%=h project_detail.SPI %></td>
+    <td><%=h project_detail.MileStonebuild %></td>
+    <td><%=h project_detail.MileStoneUnbuild %></td>
+    <td><%=h project_detail.IssuesInternal %></td>
+    <td><%=h project_detail.IssuesExternal %></td>
+    <td><%=h project_detail.QualityIndex %></td>
+    <td><%=h project_detail.HSCIndex %></td>
+    <td><%=h project_detail.MaterialAsphant %></td>
+    <td><%=h project_detail.MaterialConcrete %></td>
+    <td><%=h project_detail.MaterialHSteal %></td>
+    <td><%=h project_detail.MaterialRSteal %></td>
+    <td><%=h project_detail.MachineAvailable %></td>
+    <td><%=h project_detail.MachineUsed %></td>
+    <td><%=h project_detail.MenAvailable %></td>
+    <td><%=h project_detail.MenUsed %></td>
+    <td><%= link_to 'Show', project_detail %></td>
+    <td><%= link_to 'Edit', edit_project_detail_path(project_detail) %></td>
+    <td><%= link_to 'Destroy', project_detail, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New project_detail', new_project_detail_path %>
