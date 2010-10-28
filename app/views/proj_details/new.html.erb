@@ -1,0 +1,119 @@
+<h1>New Project detail</h1>
+
+<% form_for(@proj_detail) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :month %><br />
+    <%= f.date_select :month %>
+  </p>
+  <p>
+    % Progress<br />
+    <%= f.text_field :PercentageProgress %>
+  </p>
+  <p>
+    Planned Value<br />
+    <%= f.text_field :PlannedValue %>
+  </p>
+  <p>
+    Earned Value<br />
+    <%= f.text_field :EarnedValue %>
+  </p>
+  <p>
+    Actual Cost<br />
+    <%= f.text_field :ActualCost %>
+  </p>
+  <p>
+    LRE Site<br />
+    <%= f.text_field :LRESite %>
+  </p>
+  <p>
+    LRE PMC<br />
+    <%= f.text_field :LREPmc %>
+  </p>
+  <p>
+    CPI<br />
+    <%= f.text_field :CPI %>
+  </p>
+  <p>
+    SPI<br />
+    <%= f.text_field :SPI %>
+  </p>
+  <p>
+    Billed MileStones<br />
+    <%= f.text_field :MileStoneBilled %>
+  </p>
+  <p>
+    Unbilled MileStones<br />
+    <%= f.text_field :MileStoneUnbilled %>
+  </p>
+  <p>
+    Internal Issues<br />
+    <%= f.text_field :InternalIssues %>
+  </p>
+  <p>
+    External Issues<br />
+    <%= f.text_field :ExternalIssues %>
+  </p>
+  <p>
+    Quality Index<br />
+    <%= f.text_field :QualityIndex %>
+  </p>
+  <p>
+    HSC Index<br />
+    <%= f.text_field :HSCIndex %>
+  </p>
+  <p>
+    Procured Asphant<br />
+    <%= f.text_field :ProcuredAsphant %>
+  </p>
+  <p>
+    Billed Asphant<br />
+    <%= f.text_field :BilledAsphant %>
+  </p>
+  <p>
+    Procured Concrete<br />
+    <%= f.text_field :ProcuredConcrete %>
+  </p>
+  <p>
+    Billed Concrete<br />
+    <%= f.text_field :BilledConcrete %>
+  </p>
+  <p>
+    Procured HSteal<br />
+    <%= f.text_field :ProcuredHSteal %>
+  </p>
+  <p>
+    Billed HSteal<br />
+    <%= f.text_field :BilledHSteal %>
+  </p>
+  <p>
+    Procured RSteal<br />
+    <%= f.text_field :ProcuredRSteal %>
+  </p>
+  <p>
+    Billed RSteal<br />
+    <%= f.text_field :BilledRSteal %>
+  </p>
+  <p>
+    Machine Availability<br />
+    <%= f.text_field :MachineAvailability %>
+  </p>
+  <p>
+    Machine Used<br />
+    <%= f.text_field :MachineUsed %>
+  </p>
+  <p>
+    Manpower Availability<br />
+    <%= f.text_field :ManpowerAvailability %>
+  </p>
+  <p>
+    Manpower Used<br />
+    <%= f.text_field :ManpowerUsed %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', proj_details_path %>

@@ -1,0 +1,72 @@
+<h1>Listing Project details</h1>
+
+<table style="width:2400px">
+  <tr>
+    <th>Month</th>
+    <th>% Progress</th>
+    <th>Planned Value</th>
+    <th>Earned Value</th>
+    <th>Actual Cost</th>
+    <th>LRE Site</th>
+    <th>LRE PMC</th>
+    <th>CPI</th>
+    <th>SPI</th>
+    <th>Billed Milestones</th>
+    <th>Unbilled Milestones</th>
+    <th>Internal Issues</th>
+    <th>External Issues</th>
+    <th>Quality Index</th>
+    <th>HSC Index</th>
+    <th>Procured Asphant</th>
+    <th>Billed Asphant</th>
+    <th>Procured Concrete</th>
+    <th>Billed Concrete</th>
+    <th>Procured HSteal</th>
+    <th>Billed HSteal</th>
+    <th>Procured RSteal</th>
+    <th>Billed RSteal</th>
+    <th>Machine Availability</th>
+    <th>Machine Used</th>
+    <th>Manpower Availability</th>
+    <th>Manpower Used</th>
+  </tr>
+
+<% @proj_details.each do |proj_detail| %>
+  <tr>
+    <td><%=h proj_detail.month %></td>
+    <td><%=h proj_detail.PercentageProgress %></td>
+    <td><%=h proj_detail.PlannedValue %></td>
+    <td><%=h proj_detail.EarnedValue %></td>
+    <td><%=h proj_detail.ActualCost %></td>
+    <td><%=h proj_detail.LRESite %></td>
+    <td><%=h proj_detail.LREPmc %></td>
+    <td><%=h proj_detail.CPI %></td>
+    <td><%=h proj_detail.SPI %></td>
+    <td><%=h proj_detail.MileStoneBilled %></td>
+    <td><%=h proj_detail.MileStoneUnbilled %></td>
+    <td><%=h proj_detail.InternalIssues %></td>
+    <td><%=h proj_detail.ExternalIssues %></td>
+    <td><%=h proj_detail.QualityIndex %></td>
+    <td><%=h proj_detail.HSCIndex %></td>
+    <td><%=h proj_detail.ProcuredAsphant %></td>
+    <td><%=h proj_detail.BilledAsphant %></td>
+    <td><%=h proj_detail.ProcuredConcrete %></td>
+    <td><%=h proj_detail.BilledConcrete %></td>
+    <td><%=h proj_detail.ProcuredHSteal %></td>
+    <td><%=h proj_detail.BilledHSteal %></td>
+    <td><%=h proj_detail.ProcuredRSteal %></td>
+    <td><%=h proj_detail.BilledRSteal %></td>
+    <td><%=h proj_detail.MachineAvailability %></td>
+    <td><%=h proj_detail.MachineUsed %></td>
+    <td><%=h proj_detail.ManpowerAvailability %></td>
+    <td><%=h proj_detail.ManpowerUsed %></td>
+    <td><%= link_to 'Show', proj_detail %></td>
+    <td><%= link_to 'Edit', edit_proj_detail_path(proj_detail) %></td>
+    <td><%= link_to 'Destroy', proj_detail, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add new project detail', new_proj_detail_path %>

@@ -1,0 +1,59 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  month: 2010-10-28
+  PercentageProgress: 1
+  PlannedValue: 1
+  EarnedValue: 1
+  ActualCost: 1.5
+  LRESite: 1
+  LREPmc: 1
+  CPI: 1.5
+  SPI: 1.5
+  MileStoneBilled: 1
+  MileStoneUnbilled: 1
+  InternalIssues: 1
+  ExternalIssues: 1
+  QualityIndex: 1
+  HSCIndex: 1
+  ProcuredAsphant: 1.5
+  BilledAsphant: 1.5
+  ProcuredConcrete: 1.5
+  BilledConcrete: 1.5
+  ProcuredHSteal: 1.5
+  BilledHSteal: 1.5
+  ProcuredRSteal: 1.5
+  BilledRSteal: 1.5
+  MachineAvailability: 1
+  MachineUsed: 1
+  ManpowerAvailability: 1
+  ManpowerUsed: 1
+
+two:
+  month: 2010-10-28
+  PercentageProgress: 1
+  PlannedValue: 1
+  EarnedValue: 1
+  ActualCost: 1.5
+  LRESite: 1
+  LREPmc: 1
+  CPI: 1.5
+  SPI: 1.5
+  MileStoneBilled: 1
+  MileStoneUnbilled: 1
+  InternalIssues: 1
+  ExternalIssues: 1
+  QualityIndex: 1
+  HSCIndex: 1
+  ProcuredAsphant: 1.5
+  BilledAsphant: 1.5
+  ProcuredConcrete: 1.5
+  BilledConcrete: 1.5
+  ProcuredHSteal: 1.5
+  BilledHSteal: 1.5
+  ProcuredRSteal: 1.5
+  BilledRSteal: 1.5
+  MachineAvailability: 1
+  MachineUsed: 1
+  ManpowerAvailability: 1
+  ManpowerUsed: 1

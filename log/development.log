@@ -39,3 +39,254 @@ Processing ProjectDetailsController#index (for 127.0.0.1 at 2010-10-28 15:25:37)
 Rendering template within layouts/project_details
 Rendering project_details/index
 Completed in 9ms (View: 2, DB: 3) | 200 OK [http://localhost/project_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjectDetailsController#index (for 127.0.0.1 at 2010-10-28 16:09:43) [GET]
+  [4;36;1mProjectDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "project_details" [0m
+Rendering template within layouts/project_details
+Rendering project_details/index
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjectDetailsController#new (for 127.0.0.1 at 2010-10-28 16:09:46) [GET]
+Rendering template within layouts/project_details
+Rendering project_details/new
+Completed in 41ms (View: 32, DB: 0) | 200 OK [http://localhost/project_details/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjectDetailsController#index (for 127.0.0.1 at 2010-10-28 16:10:24) [GET]
+  [4;35;1mProjectDetail Load (1.0ms)[0m   [0mSELECT * FROM "project_details" [0m
+Rendering template within layouts/project_details
+Rendering project_details/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjectDetailsController#new (for 127.0.0.1 at 2010-10-28 16:10:28) [GET]
+Rendering template within layouts/project_details
+Rendering project_details/new
+Completed in 41ms (View: 32, DB: 0) | 200 OK [http://localhost/project_details/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjectDetails (20101028094959)
+Migrating to CreateProjDetails (20101028110610)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (83.0ms)[0m   [0mCREATE TABLE "proj_details" ("id" serial primary key, "month" date, "PercentageProgress" integer, "PlannedValue" integer, "EarnedValue" integer, "ActualCost" float, "LRESite" integer, "LREPmc" integer, "CPI" float, "SPI" float, "MileStoneBilled" integer, "MileStoneUnbilled" integer, "InternalIssues" integer, "ExternalIssues" integer, "QualityIndex" integer, "HSCIndex" integer, "ProcuredAsphant" float, "BilledAsphant" float, "ProcuredConcrete" float, "BilledConcrete" float, "ProcuredHSteal" float, "BilledHSteal" float, "ProcuredRSteal" float, "BilledRSteal" float, "MachineAvailability" integer, "MachineUsed" integer, "ManpowerAvailability" integer, "ManpowerUsed" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101028110610')[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:38:20) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 27ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 16:38:23) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 44ms (View: 35, DB: 0) | 200 OK [http://localhost/proj_details/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 16:44:01) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 82ms (View: 73, DB: 0) | 200 OK [http://localhost/proj_details/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 16:44:19) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 39ms (View: 30, DB: 1) | 200 OK [http://localhost/proj_details/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 16:51:16) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 28ms (View: 19, DB: 1) | 200 OK [http://localhost/proj_details/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:51:18) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:53:46) [GET]
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:54:26) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 18ms (View: 12, DB: 3) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:54:41) [GET]
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:54:57) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 18ms (View: 12, DB: 3) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:55:07) [GET]
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:55:18) [GET]
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 62ms (View: 56, DB: 2) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 16:55:54) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://localhost/proj_details/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:55:59) [GET]
+  [4;35;1mProjDetail Load (2.0ms)[0m   [0mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/proj_details]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 16:56:01) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 27ms (View: 18, DB: 0) | 200 OK [http://localhost/proj_details/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:56:04) [GET]
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 16:56:07) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 28ms (View: 19, DB: 0) | 200 OK [http://localhost/proj_details/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:57:22) [GET]
+  [4;35;1mProjDetail Load (1.0ms)[0m   [0mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/proj_details]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:58:25) [GET]
+  [4;35;1mProjDetail Load (1.0ms)[0m   [0mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 19ms (View: 12, DB: 2) | 200 OK [http://localhost/proj_details]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 16:58:30) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 39ms (View: 29, DB: 0) | 200 OK [http://localhost/proj_details/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:58:36) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 9ms (View: 3, DB: 3) | 200 OK [http://localhost/proj_details]
