@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Project performance</title>
+    <%= stylesheet_link_tag 'jquery.jqplot' %>
+    <%= stylesheet_link_tag 'layout' %>
+    <%= stylesheet_link_tag 'dashboard' %>
+
+    <%= javascript_include_tag "jquery-1.4.2.min" %>
+    <%= javascript_include_tag "jquery.jqplot" %>
+    <%= javascript_include_tag "plugins/jqplot.dateAxisRenderer" %>
+    <%= javascript_include_tag "plugins/jqplot.barRenderer" %>
+    <%= javascript_include_tag "plugins/jqplot.categoryAxisRenderer" %>
+    <%= javascript_include_tag "plugins/jqplot.highlighter" %>
+    <%= javascript_include_tag "plugins/jqplot.enhancedLegendRenderer" %>
+    <%= javascript_include_tag "plugins/jqplot.donutRenderer" %>
+    <%= javascript_include_tag "plugins/jqplot.pointLabels" %>
+    <%= javascript_include_tag "jquery.sparkline" %>
+    <%= javascript_include_tag "Graph" %>    
+</head>
+<body>
+	<div id="page-container">
+		<div id="branding">
+			<h1>SEW <span>| project dashboard</span></h1>
+		</div><!-- end branding -->
+        <div id="page-navigation" class="clearfix">
+			<ul>
+				<li class="current"><a href="#">Dashboard</a></li>
+			</ul>
+		</div><!-- end page-navigation -->
+		<div id="page-content" class="clearfix">
+            <%= yield %>
+		</div><!-- end page-content -->
+		<div id="page-footer">
+		</div><!-- end page-footer -->
+	</div><!-- end page-container -->
+</body>
+</html>
+
+
+

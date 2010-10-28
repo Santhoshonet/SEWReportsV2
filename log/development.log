@@ -290,3 +290,483 @@ Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 16:58:36) [G
 Rendering template within layouts/proj_details
 Rendering proj_details/index
 Completed in 9ms (View: 3, DB: 3) | 200 OK [http://localhost/proj_details]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 20:04:26) [GET]
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 25ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 20:07:35) [GET]
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 20:19:33) [GET]
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 15ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 20:19:49) [GET]
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 20:20:23) [GET]
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:10:45) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 6442ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-28 21:11:17) [GET]
+
+ActionController::RoutingError (No route matches "/projects" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:11:27) [GET]
+  [4;35;1mProjDetail Load (2.0ms)[0m   [0mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 13ms (View: 5, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 21:11:33) [GET]
+  [4;35;1mProjDetail Load (2.0ms)[0m   [0mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 27ms (View: 21, DB: 3) | 200 OK [http://localhost/proj_details]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 21:11:35) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 247ms (View: 237, DB: 0) | 200 OK [http://localhost/proj_details/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#create (for 127.0.0.1 at 2010-10-28 21:14:30) [POST]
+  Parameters: {"authenticity_token"=>"fcEpzBUoNSIRi3tCxphuAdF7wXfuIK9i3fcVoWLEHN0=", "proj_detail"=>{"month(1i)"=>"2010", "month(2i)"=>"4", "month(3i)"=>"28", "PercentageProgress"=>"49", "PlannedValue"=>"2367000000", "EarnedValue"=>"", "ActualCost"=>"1958900000", "LRESite"=>"2367000000", "LREPmc"=>"2367000000", "CPI"=>"", "SPI"=>"", "MileStoneBilled"=>"", "MileStoneUnbilled"=>"", "InternalIssues"=>"", "ExternalIssues"=>"", "QualityIndex"=>"", "HSCIndex"=>"", "ProcuredAsphant"=>"", "BilledAsphant"=>"", "ProcuredConcrete"=>"", "BilledConcrete"=>"", "ProcuredHSteal"=>"", "BilledHSteal"=>"", "ProcuredRSteal"=>"", "BilledRSteal"=>"", "MachineAvailability"=>"", "MachineUsed"=>"", "ManpowerAvailability"=>"", "ManpowerUsed"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: integer out of range
+: INSERT INTO "proj_details" ("month", "PercentageProgress", "PlannedValue", "EarnedValue", "ActualCost", "LRESite", "LREPmc", "CPI", "SPI", "MileStoneBilled", "MileStoneUnbilled", "InternalIssues", "ExternalIssues", "QualityIndex", "HSCIndex", "ProcuredAsphant", "BilledAsphant", "ProcuredConcrete", "BilledConcrete", "ProcuredHSteal", "BilledHSteal", "ProcuredRSteal", "BilledRSteal", "MachineAvailability", "MachineUsed", "ManpowerAvailability", "ManpowerUsed", "created_at", "updated_at") VALUES('2010-04-28', 49, 2367000000, NULL, 1958900000.0, 2367000000, 2367000000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-28 15:44:30.993120', '2010-10-28 15:44:30.993120') RETURNING "id"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  integer out of range
+: INSERT INTO "proj_details" ("month", "PercentageProgress", "PlannedValue", "EarnedValue", "ActualCost", "LRESite", "LREPmc", "CPI", "SPI", "MileStoneBilled", "MileStoneUnbilled", "InternalIssues", "ExternalIssues", "QualityIndex", "HSCIndex", "ProcuredAsphant", "BilledAsphant", "ProcuredConcrete", "BilledConcrete", "ProcuredHSteal", "BilledHSteal", "ProcuredRSteal", "BilledRSteal", "MachineAvailability", "MachineUsed", "ManpowerAvailability", "ManpowerUsed", "created_at", "updated_at") VALUES('2010-04-28', 49, 2367000000, NULL, 1958900000.0, 2367000000, 2367000000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-28 15:44:30.993120', '2010-10-28 15:44:30.993120') RETURNING "id"):
+  app/controllers/proj_details_controller.rb:46:in `block in create'
+  app/controllers/proj_details_controller.rb:45:in `create'
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (26.0ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (112.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjectDetails (20101028094959)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (76.0ms)[0m   [0mCREATE TABLE "project_details" ("id" serial primary key, "month" date, "location" character varying(255), "PlannedValue" integer, "LREContract" integer, "LREPmc" integer, "ContractorIndex" integer, "CPI" float, "SPI" float, "MileStonebuild" integer, "MileStoneUnbuild" integer, "IssuesInternal" integer, "IssuesExternal" integer, "QualityIndex" integer, "HSCIndex" integer, "MaterialAsphant" float, "MaterialConcrete" float, "MaterialHSteal" float, "MaterialRSteal" float, "MachineAvailable" integer, "MachineUsed" integer, "MenAvailable" integer, "MenUsed" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101028094959')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProjDetails (20101028110610)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (262.0ms)[0m   [0mCREATE TABLE "proj_details" ("id" serial primary key, "month" date, "PercentageProgress" integer, "PlannedValue" decimal, "EarnedValue" integer, "ActualCost" float, "LRESite" integer, "LREPmc" integer, "CPI" float, "SPI" float, "MileStoneBilled" integer, "MileStoneUnbilled" integer, "InternalIssues" integer, "ExternalIssues" integer, "QualityIndex" integer, "HSCIndex" integer, "ProcuredAsphant" float, "BilledAsphant" float, "ProcuredConcrete" float, "BilledConcrete" float, "ProcuredHSteal" float, "BilledHSteal" float, "ProcuredRSteal" float, "BilledRSteal" float, "MachineAvailability" integer, "MachineUsed" integer, "ManpowerAvailability" integer, "ManpowerUsed" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101028110610')[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (81.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjectDetails (20101028094959)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (74.0ms)[0m   [0mCREATE TABLE "project_details" ("id" serial primary key, "month" date, "location" character varying(255), "PlannedValue" integer, "LREContract" integer, "LREPmc" integer, "ContractorIndex" integer, "CPI" float, "SPI" float, "MileStonebuild" integer, "MileStoneUnbuild" integer, "IssuesInternal" integer, "IssuesExternal" integer, "QualityIndex" integer, "HSCIndex" integer, "MaterialAsphant" float, "MaterialConcrete" float, "MaterialHSteal" float, "MaterialRSteal" float, "MachineAvailable" integer, "MachineUsed" integer, "MenAvailable" integer, "MenUsed" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101028094959')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProjDetails (20101028110610)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE "proj_details" ("id" serial primary key, "month" date, "PercentageProgress" integer, "PlannedValue" decimal, "EarnedValue" decimal, "ActualCost" float, "LRESite" decimal, "LREPmc" decimal, "CPI" float, "SPI" float, "MileStoneBilled" integer, "MileStoneUnbilled" integer, "InternalIssues" integer, "ExternalIssues" integer, "QualityIndex" integer, "HSCIndex" integer, "ProcuredAsphant" float, "BilledAsphant" float, "ProcuredConcrete" float, "BilledConcrete" float, "ProcuredHSteal" float, "BilledHSteal" float, "ProcuredRSteal" float, "BilledRSteal" float, "MachineAvailability" integer, "MachineUsed" integer, "ManpowerAvailability" integer, "ManpowerUsed" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101028110610')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (24.0ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (67.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjectDetails (20101028094959)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (69.0ms)[0m   [0mCREATE TABLE "project_details" ("id" serial primary key, "month" date, "location" character varying(255), "PlannedValue" integer, "LREContract" integer, "LREPmc" integer, "ContractorIndex" integer, "CPI" float, "SPI" float, "MileStonebuild" integer, "MileStoneUnbuild" integer, "IssuesInternal" integer, "IssuesExternal" integer, "QualityIndex" integer, "HSCIndex" integer, "MaterialAsphant" float, "MaterialConcrete" float, "MaterialHSteal" float, "MaterialRSteal" float, "MachineAvailable" integer, "MachineUsed" integer, "MenAvailable" integer, "MenUsed" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101028094959')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProjDetails (20101028110610)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (105.0ms)[0m   [0mCREATE TABLE "proj_details" ("id" serial primary key, "month" date, "PercentageProgress" integer, "PlannedValue" decimal, "EarnedValue" decimal, "ActualCost" float, "LRESite" decimal, "LREPmc" decimal, "CPI" float, "SPI" float, "MileStoneBilled" decimal, "MileStoneUnbilled" decimal, "InternalIssues" decimal, "ExternalIssues" decimal, "QualityIndex" decimal, "HSCIndex" decimal, "ProcuredAsphant" float, "BilledAsphant" float, "ProcuredConcrete" float, "BilledConcrete" float, "ProcuredHSteal" float, "BilledHSteal" float, "ProcuredRSteal" float, "BilledRSteal" float, "MachineAvailability" integer, "MachineUsed" integer, "ManpowerAvailability" integer, "ManpowerUsed" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101028110610')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:36:19) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 13ms (View: 5, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-28 21:36:31) [GET]
+
+ActionController::RoutingError (No route matches "/projdetails" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 21:36:54) [GET]
+  [4;35;1mProjDetail Load (2.0ms)[0m   [0mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 8ms (View: 2, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#new (for 127.0.0.1 at 2010-10-28 21:36:56) [GET]
+Rendering template within layouts/proj_details
+Rendering proj_details/new
+Completed in 28ms (View: 19, DB: 0) | 200 OK [http://localhost/proj_details/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#create (for 127.0.0.1 at 2010-10-28 21:38:22) [POST]
+  Parameters: {"authenticity_token"=>"fcEpzBUoNSIRi3tCxphuAdF7wXfuIK9i3fcVoWLEHN0=", "proj_detail"=>{"month(1i)"=>"2010", "month(2i)"=>"4", "month(3i)"=>"28", "PercentageProgress"=>"49", "PlannedValue"=>"2367000000", "EarnedValue"=>"", "ActualCost"=>"1958900000", "LRESite"=>"", "LREPmc"=>"2367000000", "CPI"=>"2367000000", "SPI"=>"", "MileStoneBilled"=>"", "MileStoneUnbilled"=>"", "InternalIssues"=>"", "ExternalIssues"=>"", "QualityIndex"=>"", "HSCIndex"=>"", "ProcuredAsphant"=>"", "BilledAsphant"=>"", "ProcuredConcrete"=>"", "BilledConcrete"=>"", "ProcuredHSteal"=>"", "BilledHSteal"=>"", "ProcuredRSteal"=>"", "BilledRSteal"=>"", "MachineAvailability"=>"", "MachineUsed"=>"", "ManpowerAvailability"=>"", "ManpowerUsed"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "proj_details" ("month", "PercentageProgress", "PlannedValue", "EarnedValue", "ActualCost", "LRESite", "LREPmc", "CPI", "SPI", "MileStoneBilled", "MileStoneUnbilled", "InternalIssues", "ExternalIssues", "QualityIndex", "HSCIndex", "ProcuredAsphant", "BilledAsphant", "ProcuredConcrete", "BilledConcrete", "ProcuredHSteal", "BilledHSteal", "ProcuredRSteal", "BilledRSteal", "MachineAvailability", "MachineUsed", "ManpowerAvailability", "ManpowerUsed", "created_at", "updated_at") VALUES('2010-04-28', 49, 2367000000.0, NULL, 1958900000.0, NULL, 2367000000.0, 2367000000.0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-28 16:08:22.171979', '2010-10-28 16:08:22.171979') RETURNING "id"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/proj_details/1
+Completed in 26ms (DB: 5) | 302 Found [http://localhost/proj_details]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#show (for 127.0.0.1 at 2010-10-28 21:38:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" WHERE ("proj_details"."id" = 1) [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/show
+Completed in 29ms (View: 17, DB: 2) | 200 OK [http://localhost/proj_details/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:38:33) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 35ms (View: 5, DB: 2) | 200 OK [http://localhost/reports]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 21:39:08) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 21ms (View: 13, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:39:28) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 21ms (View: 5, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 21:39:52) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:40:25) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 21ms (View: 5, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:41:19) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 5, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:45:38) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:46:19) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 21ms (View: 5, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:46:56) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 5, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:47:17) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:50:02) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 23ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:50:33) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 24ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:50:53) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+
+NoMethodError (undefined method `key' for ["2010-Apr-1", Infinity]:Array):
+  app/controllers/reports_controller.rb:39:in `block in index'
+  app/controllers/reports_controller.rb:38:in `each'
+  app/controllers/reports_controller.rb:38:in `each_with_index'
+  app/controllers/reports_controller.rb:38:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Users/Santhosh/AppData/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (105.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:52:18) [GET]
+  [4;36;1mProjDetail Load (3.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 5, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:52:35) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 5, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 21:53:43) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:58:08) [GET]
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 21:59:23) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 5, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 22:00:44) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 22ms (View: 14, DB: 3) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProjDetailsController#index (for 127.0.0.1 at 2010-10-28 22:02:41) [GET]
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" [0m
+Rendering template within layouts/proj_details
+Rendering proj_details/index
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/proj_details]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 22:02:50) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 5, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 22:03:09) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 22ms (View: 5, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-28 22:15:06) [GET]
+  [4;36;1mProjDetail Load (1.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 23ms (View: 6, DB: 2) | 200 OK [http://localhost/]
