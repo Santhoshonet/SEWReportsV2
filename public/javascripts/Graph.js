@@ -64,7 +64,8 @@ $(function() {
     var s9 = generateArray($('#issuelastmonth').html());  // Last month External & Internal Issues
     var s10= generateArray($('#issuelastbeforemonth').html()); // Last before month External & Internal Issues
 
-        // debugger;
+        var donuttitle = 'Outter circle ' + $('#donuttitle_outer').html() + ' , Inner circle ' + $('#donuttitle_inner').html();
+
 
         plot1 = $.jqplot('chart-1', [s1,s2], {
             grid:{
@@ -240,6 +241,7 @@ $(function() {
             }
         });
         plot4 = $.jqplot('chart-4',[s9,s10],{
+            title: donuttitle,
             grid:{
                 borderWidth:0,
                 shadow: false,

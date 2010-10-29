@@ -12,15 +12,22 @@ class ReportsController < ApplicationController
     @lre_pmc = Hash.new
     @cpi_cummulative = Hash.new
     @spi_cummulative = Hash.new
-    @asphault_usage_cummulative = Hash.new
-    @concrete_usage_cummulative = Hash.new
-    @hsteel_usage_cummulative = Hash.new
-    @rsteel_usage_cummulative = Hash.new
-    @machine_usage_cummulative = Hash.new
-    @manpower_usage_cummulative = Hash.new
+
 
     @sum_of_all_pv = 0.00
     @sum_of_all_lrepmc = 0.00
+    @sum_of_all_procurred_asphault = 0.00
+    @sum_of_all_billed_asphault = 0.00
+    @sum_of_all_procurred_concrete = 0.00
+    @sum_of_all_billed_concrete = 0.00
+    @sum_of_all_procurred_hsteel = 0.00
+    @sum_of_all_billed_hsteel = 0.00
+    @sum_of_all_procurred_rsteel = 0.00
+    @sum_of_all_billed_rsteel = 0.00
+    @sum_of_all_machine_availability = 0.00
+    @sum_of_all_machine_usage = 0.00
+    @sum_of_all_manpower_availability = 0.00
+    @sum_of_all_manpower_usage = 0.00
 
     flash[:issuelastmonth] == ''
     flash[:issuelastbeforemonth] == ''
@@ -38,6 +45,90 @@ class ReportsController < ApplicationController
       begin
           unless projdetail.LREPmc.nil? and projdetail.empty?
             @sum_of_all_lrepmc += projdetail.LREPmc
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.ProcuredAsphant.nil?
+            @sum_of_all_procurred_asphault += projdetail.ProcuredAsphant
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.BilledAsphant.nil?
+            @sum_of_all_billed_asphault += projdetail.BilledAsphant
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.ProcuredConcrete.nil?
+            @sum_of_all_procurred_concrete += projdetail.ProcuredConcrete
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.BilledConcrete.nil?
+            @sum_of_all_billed_concrete += projdetail.BilledConcrete
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.ProcuredHSteal.nil?
+            @sum_of_all_procurred_hsteel += projdetail.ProcuredHSteal
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.BilledHSteal.nil?
+            @sum_of_all_billed_hsteel += projdetail.BilledHSteal
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.ProcuredRSteal.nil?
+            @sum_of_all_procurred_rsteel += projdetail.ProcuredRSteal
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.BilledRSteal.nil?
+            @sum_of_all_billed_rsteel += projdetail.BilledRSteal
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.MachineAvailability.nil?
+            @sum_of_all_machine_availability += projdetail.MachineAvailability
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.MachineUsed.nil?
+            @sum_of_all_machine_usage += projdetail.MachineUsed
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.ManpowerAvailability.nil?
+            @sum_of_all_manpower_availability += projdetail.ManpowerAvailability
+          end
+      rescue
+      end
+
+      begin
+          if !projdetail.ManpowerUsed.nil?
+            @sum_of_all_manpower_usage += projdetail.ManpowerUsed
           end
       rescue
       end
@@ -156,112 +247,10 @@ class ReportsController < ApplicationController
           puts "Error at generating values for Cost Vs Schedule due to " + exc.message
       end
 
-
-      # Graph 5 [Asphault usage]
-      begin
-          if !projdetail.ProcuredAsphant.nil? and !projdetail.BilledAsphant.nil?
-              if !@asphault_usage_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
-                result = ( (projdetail.ProcuredAsphant - projdetail.BilledAsphant) / (projdetail.ProcuredAsphant) ) * 10
-                if result.nan? or result.infinite?
-                  @asphault_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = 0
-                else
-                  @asphault_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = result
-                end
-              end
-          end
-      rescue Exception => exc
-        puts "Error at generating values for Asphault usage due to " + exc.message
-      end
-
-      # for [Concrete usage]
-      begin
-          if !projdetail.ProcuredConcrete.nil? and projdetail.BilledConcrete.nil?
-            if !@concrete_usage_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
-                result = ( (projdetail.ProcuredConcrete - projdetail.BilledConcrete) / (projdetail.ProcuredConcrete) ) * 10
-                if result.nan? or result.infinite?
-                    @concrete_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = 0
-                else
-                    @concrete_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = result
-                end
-            end            
-          end
-      rescue Exception => exc
-        puts "Error at generating values for Concrete usage due to " + exc.message
-      end
-
-      # for HSteel usage
-      begin
-          if !projdetail.ProcuredHSteal.nil? and projdetail.BilledHSteal.nil?
-            if !@hsteel_usage_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
-                result = ( (projdetail.ProcuredHSteal - projdetail.BilledHSteal) / (projdetail.ProcuredHSteal) ) * 10
-                if result.nan? or result.infinite?
-                    @hsteel_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = 0
-                else
-                    @hsteel_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = result
-                end
-            end
-          end
-      rescue Exception => exc
-        puts "Error at generating values for HSteel usage due to " + exc.message
-      end
-
-
-      # for RSteel usage
-      begin
-          if !projdetail.ProcuredRSteal.nil? and projdetail.BilledRSteal.nil?
-            if !@rsteel_usage_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
-                result = ( (projdetail.ProcuredRSteal - projdetail.BilledRSteal) / (projdetail.ProcuredRSteal) ) * 10
-                if result.nan? or result.infinite?
-                    @rsteel_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = 0
-                else
-                    @rsteel_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = result
-                end
-            end
-          end
-      rescue Exception => exc
-        puts "Error at generating values for RSteel usage due to " + exc.message
-      end
-
-
-
-      # for Machine usage
-      begin
-          if !projdetail.MachineAvailability.nil? and projdetail.MachineUsed.nil?
-            if !@machine_usage_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
-                result = ( (projdetail.MachineAvailability - projdetail.MachineUsed) / (projdetail.MachineAvailability) ) * 10
-                if result.nan? or result.infinite?
-                    @machine_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = 0
-                else
-                    @machine_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = result
-                end
-            end
-          end
-      rescue Exception => exc
-        puts "Error at generating values for machine usage due to " + exc.message
-      end
-
-
-      # for manpower usage
-      begin
-          if !projdetail.ManpowerAvailability.nil? and projdetail.ManpowerUsed.nil?
-            if !@manpower_usage_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
-                result = ( (projdetail.ManpowerAvailability - projdetail.ManpowerUsed) / (projdetail.ManpowerAvailability) ) * 10
-                if result.nan? or result.infinite?
-                    @manpower_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = 0
-                else
-                    @manpower_usage_cummulative[projdetail.month.strftime("%Y-%b-1")] = result
-                end
-            end
-          end
-      rescue Exception => exc
-        puts "Error at generating values for manpower usage due to " + exc.message
-      end
-
-
       # For Issues Analysis
       begin
           if projyear == currentyear
-            if currentmonth == projmonth
+            if projmonth == currentmonth - 1
               # yes it is lastmonth
               extiss = 0
               if !projdetail.ExternalIssues.nil?
@@ -269,10 +258,11 @@ class ReportsController < ApplicationController
               end
               intiss = 0
               if !projdetail.InternalIssues.nil?
-                extiss = projdetail.InternalIssues
+                intiss = projdetail.InternalIssues
               end
               flash[:issuelastmonth] = "External," + extiss.to_s + "#Internal," + intiss.to_s
-            elsif projmonth == currentmonth - 1
+              flash[:donuttitle_outer] = projdetail.month.strftime('%b-%Y') 
+            elsif projmonth == currentmonth - 2
               # yes it is before to last month
               extiss = 0
               if !projdetail.ExternalIssues.nil?
@@ -280,9 +270,10 @@ class ReportsController < ApplicationController
               end
               intiss = 0
               if !projdetail.InternalIssues.nil?
-                extiss = projdetail.InternalIssues
+                intiss = projdetail.InternalIssues
               end
               flash[:issuelastbeforemonth] = "External," + extiss.to_s + "#Internal," + intiss.to_s
+              flash[:donuttitle_inner] = projdetail.month.strftime('%b-%Y')
             end
           end
       rescue Exception => exc
@@ -380,39 +371,23 @@ class ReportsController < ApplicationController
 
     # for Asphault usage
     flash[:asphault_cummulative] = 0
-    @asphault_usage_cummulative.each_with_index do |crc,index|
-        flash[:asphault_cummulative] += crc[1]
-    end
+    flash[:asphault_cummulative] = (@sum_of_all_billed_asphault / @sum_of_all_procurred_asphault) * 10
 
-    # for Concrete usage
     flash[:concrete_cummulative] = 0
-    @concrete_usage_cummulative.each_with_index do |crc,index|
-        flash[:concrete_cummulative] += crc[1]
-    end
+    flash[:concrete_cummulative] = (@sum_of_all_billed_concrete / @sum_of_all_procurred_concrete)  * 10
 
-    # for HSteal usage
     flash[:hsteel_cummulative] = 0
-    @hsteel_usage_cummulative.each_with_index do |crc,index|
-        flash[:hsteel_cummulative] += crc[1]
-    end
+    flash[:hsteel_cummulative] =  (@sum_of_all_billed_hsteel / @sum_of_all_procurred_hsteel)  * 10
 
-    # for RSteal usage
     flash[:rsteel_cummulative] = 0
-    @rsteel_usage_cummulative.each_with_index do |crc,index|
-        flash[:rsteel_cummulative] += crc[1]
-    end
+    flash[:rsteel_cummulative] = (@sum_of_all_billed_rsteel / @sum_of_all_procurred_rsteel) * 10
 
-    # for Machine usage
     flash[:machine_usage_cummulative] = 0
-    @machine_usage_cummulative.each_with_index do |crc,index|
-        flash[:machine_usage_cummulative] += crc[1]
-    end
+    flash[:machine_usage_cummulative] = (@sum_of_all_machine_usage / @sum_of_all_machine_availability ) * 10
 
-    # for Manpower usage
     flash[:man_power_usage_cummulative] = 0
-    @manpower_usage_cummulative.each_with_index do |crc,index|
-        flash[:man_power_usage_cummulative] += crc[1]
-    end
-    
+    flash[:man_power_usage_cummulative] = (@sum_of_all_manpower_usage / @sum_of_all_manpower_availability) * 10
+
+
   end
 end
