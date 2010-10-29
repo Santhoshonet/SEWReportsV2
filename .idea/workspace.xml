@@ -38,10 +38,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reports_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reports_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="299" column="34" selection-start="9721" selection-end="9721" vertical-scroll-proportion="0.34748012">
+            <state line="299" column="34" selection-start="9721" selection-end="9721" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -56,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/reports/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="54" selection-start="5050" selection-end="5050" vertical-scroll-proportion="-14.090909">
+            <state line="125" column="61" selection-start="5069" selection-end="5069" vertical-scroll-proportion="0.91549295">
               <folding />
             </state>
           </provider>
@@ -92,8 +92,8 @@
         <option value="$PROJECT_DIR$/app/views/proj_details/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" />
         <option value="$PROJECT_DIR$/public/javascripts/Graph.js" />
-        <option value="$PROJECT_DIR$/app/views/reports/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/reports/index.html.erb" />
       </list>
     </option>
   </component>
@@ -650,16 +650,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/reports/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="54" selection-start="5050" selection-end="5050" vertical-scroll-proportion="-14.090909">
+        <state line="299" column="34" selection-start="9721" selection-end="9721" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/reports/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="34" selection-start="9721" selection-end="9721" vertical-scroll-proportion="0.34748012">
+        <state line="125" column="61" selection-start="5069" selection-end="5069" vertical-scroll-proportion="0.91549295">
           <folding />
         </state>
       </provider>
