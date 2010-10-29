@@ -626,7 +626,7 @@
             // draw the performance bar
             var perfval = parseInt(values[1]);
             var perfwidth = Math.round(canvas_width*((perfval-min)/range));
-            target.drawRect(0, Math.round(canvas_height*0.3), perfwidth-1, Math.round(canvas_height*0.4)-1, options.performanceColor, options.performanceColor);
+            target.drawRect(0, Math.round(canvas_height*0.4), perfwidth-1, Math.round(canvas_height*0.2)-1, options.performanceColor, options.performanceColor);
 
             // draw the target linej
             var targetval = parseInt(values[0]);

@@ -6,6 +6,12 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>ProjDetails: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'scaffold' %>
+  <%= javascript_include_tag "jquery-1.4.2.min" %>
+  <script language="javascript" type=text/javascript>
+        $(function() {
+           $('select[name="project_performance[month(3i)]"').hide();
+        });
+  </script>
 </head>
 <body>
 

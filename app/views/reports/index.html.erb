@@ -1,29 +1,112 @@
 <div class="inner-box clearfix">
-    <div class="container">
-        <div class="span-10 append-bottom">
-            <h1>Contract Confidence</h1>
-            <div class="append-bottom" id="chart-1"></div>
-        </div>
-        <div class="push-1 span-10 last append-bottom">
-            <h1>Estimate Confidence</h1>
-            <div class="append-bottom" id="chart-2"></div>
-        </div>
-        <div class="span-10 append-bottom">
-            <h1>Cost Vs Schedule Performance</h1>
-            <div class="append-bottom" id="chart-3"></div>
-        </div>
-        <div class="push-1 span-10 last append-bottom">
-            <h1>Delay Analysis</h1>
-            <div class="append-bottom" id="chart-4"></div>
-        </div>
-        <div class="span-10 append-bottom">
-            <h1>Asphalt Usage</h1>
-            <span class="append-bottom" id="asphalt">9,7,10,8,6</span>
-        </div>
-        <div class="push-1 span-10 last append-bottom">
-            <h1>Concrete Usage</h1>
-            <span class="append-bottom" id="concrete">9,4,10,8,6</span>
-        </div>
-    </div>
-</div>
+                <div class="container">
+                    <div class="span-10 append-bottom">
+                        <h1>Contract Confidence</h1>
+                        <div class="append-bottom" id="chart-1"></div>
+                    </div>
+                    <div class="push-1 span-10 last append-bottom">
+                         <h1>Estimate Confidence</h1>
+                        <div class="append-bottom" id="chart-2"></div>
+                    </div>
+                    <div class="span-10 append-bottom prepend-top">
+                        <h1>Cost Vs Schedule Performance</h1>
+                        <div class="append-bottom" id="chart-3"></div>
+                    </div>
+                    <div class="push-1 span-10 last append-bottom prepend-top">
+                        <h1>Issue Analysis</h1>
+                        <div class="append-bottom" id="chart-4"></div>
+                    </div>
+                    <div class="span-10 append-bottom prepend-top">
+                         <h1>Material Usage</h1>
+                        <div class="span-3 append-bottom prepend-top">
+                            <h4>Asphalt Usage</h4>
+                        </div>
+                        <div class="span-7 last append-bottom prepend-top">
+                            <span id="asphalt">9,<%= flash[:asphault_cummulative] %>,10,8,6</span>
+                        </div>
+                        <div class="span-3 append-bottom">
+                            <h4>Concrete Usage</h4>
+                        </div>
+                        <div class="span-7 last append-bottom">
+                            <span id="concrete">9,<%= flash[:concrete_cummulative] %>,10,8,6</span>
+                        </div>
+                        <div class="span-3 append-bottom">
+                            <h4>HSteel Usage</h4>
+                        </div>
+                        <div class="span-7 last append-bottom">
+                            <span id="hsteel">9,<%= flash[:hsteel_cummulative] %>,10,8,6</span>
+                        </div>
+                        <div class="span-3 append-bottom">
+                            <h4>RSteel Usage</h4>
+                        </div>
+                        <div class="span-7 last append-bottom">
+                            <span id="rsteel">9,<%= flash[:rsteel_cummulative] %>,10,8,6</span>
+                        </div>
+                    </div>
+                    <div class="push-1 span-10 last append-bottom prepend-top">
+                        <h1>Resource Usage</h1>
+                        <div class="span-3 append-bottom prepend-top">
+                            <h4>Machinery Usage</h4>
+                        </div>
+                        <div class="span-7 last append-bottom prepend-top">
+                            <span id="machine">9,<%= flash[:machine_usage_cummulative] %>,10,8,6</span>
+                        </div>
+                        <div class="span-3 append-bottom">
+                            <h4>HR Usage</h4>
+                        </div>
+                        <div class="span-7 last append-bottom">
+                            <span id="hr">9,<%= flash[:man_power_usage_cummulative] %>,10,8,6</span>
+                        </div>
+                    </div>
+                </div>
+			</div>
 
+
+
+<div style='display:none'>
+    <div id='contract_budget_confidence'>
+      <%= flash[:contract_budget_confidence] %>
+    </div>
+    <div id='contract_reestimate_confidence'>
+      <%= flash[:contract_reestimate_confidence] %>
+    </div>
+    <div id='pv_cummulative'>
+      <%= flash[:pv_cummulative] %>
+    </div>
+    <div id='lresite_cummulative'>
+        <%= flash[:lresite_cummulative] %>
+    </div>
+    <div id='lrepmc_cummulative'>
+        <%= flash[:lrepmc_cummulative] %>
+    </div>
+    <div id='cpi_cummulative'>
+        <%= flash[:cpi_cummulative] %>
+    </div>
+    <div id='spi_cummulative'>
+        <%= flash[:spi_cummulative] %>
+    </div>
+    <div id='asphault_cummulative'>
+        <%= flash[:asphault_cummulative] %>
+    </div>
+  <div id='concrete_cummulative'>
+        <%= flash[:concrete_cummulative] %>
+    </div>
+    <div id='hsteel_cummulative'>
+        <%= flash[:hsteel_cummulative] %>
+    </div>
+  <div id='rsteel_cummulative'>
+        <%= flash[:rsteel_cummulative] %>
+    </div>
+    <div id='machine_usage_cummulative'>
+        <%= flash[:machine_usage_cummulative] %>
+    </div>
+  <div id='man_power_usage_cummulative'>
+        <%= flash[:man_power_usage_cummulative] %>
+    </div>
+    <div id='issuelastmonth'>
+        <%= flash[:issuelastmonth] %>
+    </div>
+  <div id='issuelastbeforemonth'>
+        <%= flash[:issuelastbeforemonth] %>
+  </div>
+</div>

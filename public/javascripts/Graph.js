@@ -1,7 +1,39 @@
 $(function() {
-        $('#asphalt').sparkline('html',{type:'bullet',width:'350px',height:'30px',performanceColor:'#006CC6', rangeColors:['#ddd','#bbb','#aaa']});
-        $('#concrete').sparkline('html',{type:'bullet',width:'350px',height:'30px',performanceColor:'#FF9000',targetColor:'#FF2300', rangeColors:['#ddd','#bbb','#aaa']});
+
+
+    function generateArray(str) {
+        if (str != null && str != "") {
+            var split = str.split('#');
+            var array = new Array(split.length);
+            for (var i = 0; i < split.length; i++) {
+                array[i] = new Array(2);
+                var split2 = split[i].split(",");
+                if (split2.length > 1) {
+                    array[i][0] = split2[0];
+                    array[i][1] = split2[1];
+                }
+                else {
+                    array[i][0] = null;
+                    array[i][1] = null;
+                }
+            }
+            return array;
+        }
+        else
+        {
+            var array = new Array(1);
+            return array;
+        }
+    };
+
+        $('#asphalt').sparkline('html',{type:'bullet',width:'250px',height:'20px',performanceColor:'#006CC6',targetColor:'#FF2300', rangeColors:['#ddd','#bbb','#aaa']});
+        $('#concrete').sparkline('html',{type:'bullet',width:'250px',height:'20px',performanceColor:'#006CC6',targetColor:'#FF2300', rangeColors:['#ddd','#bbb','#aaa']});
+        $('#hsteel').sparkline('html',{type:'bullet',width:'250px',height:'20px',performanceColor:'#006CC6',targetColor:'#FF2300', rangeColors:['#ddd','#bbb','#aaa']});
+        $('#rsteel').sparkline('html',{type:'bullet',width:'250px',height:'20px',performanceColor:'#006CC6',targetColor:'#FF2300', rangeColors:['#ddd','#bbb','#aaa']});
+        $('#machine').sparkline('html',{type:'bullet',width:'250px',height:'20px',performanceColor:'#006CC6',targetColor:'#FF2300', rangeColors:['#ddd','#bbb','#aaa']});
+        $('#hr').sparkline('html',{type:'bullet',width:'250px',height:'20px',performanceColor:'#006CC6',targetColor:'#FF2300', rangeColors:['#ddd','#bbb','#aaa']});
         $.jqplot.config.enablePlugins = true;
+/**
         s1 = [['2010-Apr-1', -3], ['2010-May-1', -2], ['2010-Jun-1', -1],['2010-Jul-1', 0],['2010-Aug-1', 1]];
         s2 = [['2010-Apr-1', -2], ['2010-May-1', -1], ['2010-Jun-1', 0],['2010-Jul-1', 2],['2010-Aug-1', 3]];
         s3 = [[]];
@@ -12,19 +44,53 @@ $(function() {
         s8 = [['2010-Feb-1', 0.075], ['2010-Mar-1', 0.15], ['2010-Apr-1', 0.3], ['2010-May-1', 0.55], ['2010-Jun-1', 0.85], ['2010-Jul-1', 0.95], ['2010-Aug-1', 1.2], ['2010-Sep-1', 1.1]];
         s9 = [['External',70],['Internal',30]];
         s10= [['External',30],['Internal',70]];
-        plot1 = $.jqplot('chart-1', [s1,s2,s3], {
+**/
+
+    var s1 = generateArray($('#contract_budget_confidence').html());  // Contract Confidence
+    var s2 = generateArray($('#contract_reestimate_confidence').html());  // Contract Confidence
+    var s3 = [[]];
+    var s4 = generateArray($('#pv_cummulative').html());  // PV Cummulative
+    var s5 = generateArray($('#lresite_cummulative').html());  // LRE Site Cummulative
+    var s6 = generateArray($('#lrepmc_cummulative').html());  // LRE PMC Cummulative
+    var s7 = generateArray($('#cpi_cummulative').html());  // CPI Cummulative
+    var s8 = generateArray($('#spi_cummulative').html());  // SPI Cummulative
+    var s9 = generateArray($('#issuelastmonth').html());  // Last month External & Internal Issues
+    var s10= generateArray($('#issuelastbeforemonth').html()); // Last before month External & Internal Issues
+    
+
+        plot1 = $.jqplot('chart-1', [s1,s2], {
+            grid:{
+                borderWidth:0,
+                shadow: false,
+                backgroundColor: '#FFFFFF'
+            },
             axes: {
-                pad: 10,
+                renderer: $.jqplot.LinearAxisRenderer,
+                rendererOptions:{
+                    tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+                    },
                 xaxis: {
                     renderer: $.jqplot.DateAxisRenderer,
+                    borderWidth:1,
                     tickOptions:{
-                      formatString:'%b-%Y',
-                      showGridline: false
+                        showMark: false,
+                        formatString:'%b-%y',
+                        showGridline:false
                     }
                 },
                 yaxis: {
+                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                    min:-15,
+                    max: 15,
+                    borderWidth:1,
                     tickOptions: {
                         formatString: '%.0f'
+                    },
+                    label:'Current Efficiency / Required Efficiency',
+                    labelOptions:{
+                        fontFamily: 'Helvetica',
+                        fontSize: '0.75em'
                     }
                 }
             },
@@ -34,40 +100,64 @@ $(function() {
                 formatString: '<div class="jqplot-highlighter">%s, <strong>%s</strong></div>'
             },
             series: [
-            { pointLabels:{show:false}, markerOptions: { style: 'filledCircle', size: 15, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
-            { pointLabels:{show:false}, markerOptions: { style: 'filledCircle', size: 15, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
-            { pointLabels:{show:false}, showLine: false, markerOptions: { style: 'filledCircle', size: 15, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} }
+            { pointLabels:{show:false}, markerOptions: { style: 'filledCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
+            { pointLabels:{show:false}, markerOptions: { style: 'filledCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} }
             ],
 
-            seriesColors: ["#00BD39", "#FFE800", "#FF2300"]
+            seriesColors: ["#006CC6", "#FF9000"],
+            legend: {
+                renderer: $.jqplot.EnhancedLegendRenderer,
+                show: true,
+                showSwatches: true,
+                labels: ['Budget', 'Re Estimate'],
+                rendererOptions: {
+                    numberRows: 1
+                },
+                placement: 'outside',
+                location: 's',
+                marginTop: '40px'
+            }
 
         });
         plot2 = $.jqplot('chart-2', [s4, s5, s6], {
+            grid:{
+                borderWidth:0,
+                shadow: false,
+                backgroundColor: '#FFFFFF'
+            },
             axes: {
                 pad: 10,
+                rendererOptions:{
+                    tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+                },
                 xaxis: {
-                    renderer: $.jqplot.CategoryAxisRenderer,
                     renderer: $.jqplot.DateAxisRenderer,
+                    tickInterval: '4 months',
                     tickOptions: {
-                        formatString: '%b-%Y',
+                        showMark: false,
+                        formatString: '%b-%y',
                         showGridline: false
                     }
                 },
                 yaxis: {
                     tickOptions: {
-                        formatString: '%.0f'
+                        formatString: '%.0f',
+                        showGridline: true
                     }
                 }
             },
             highlighter: {
                 sizeAdjust: 10,
                 tooltipLocation: 'n',
+                bringSeriesToFront: true,
+                useAxesFormatters: true,
                 formatString: '<div class="jqplot-highlighter">%s, <strong>%s</strong></div>'
             },
             series: [
             { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'filledCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
-            { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'filledDiamond', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
-            { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'filledSquare', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} }
+            { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'filledCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
+            { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'filledCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} }
             ],
 
             seriesColors: ["#FF9000", "#006CC6", "#00BD39"],
@@ -81,26 +171,40 @@ $(function() {
                 },
                 placement: 'outside',
                 location: 's',
-                marginTop: '30px'
+                marginTop: '40px'
             }
 
         });
         plot3 = $.jqplot('chart-3', [s7, s8], {
-            fontFamily:"'Tahoma",
-            fontSize:"1em",
+            grid:{
+                borderWidth:0,
+                shadow: false,
+                backgroundColor: '#FFFFFF'
+            },
             axes: {
-                pad: 10,
+                renderer:{
+                    renderer: $.jqplot.CanvasAxisTickRenderer,
+                    renderer: $.jqplot.CanvasAxisLabelRenderer
+                },
                 xaxis: {
-                    renderer: $.jqplot.CategoryAxisRenderer,
                     renderer: $.jqplot.DateAxisRenderer,
                     tickOptions: {
-                        formatString: '%b-%Y',
-                        showGridline: false
+                        formatString: '%b-%y',
+                        showGridline: false,
+                        showMark: false
                     }
                 },
                 yaxis: {
+                    min: -0.5,
+                    max: 1.5, 
+                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                    label: 'Index',
+                    labelOptions: {
+                        fontSize: '0.75em'
+                    },
                     tickOptions: {
-                        formatString: '%.2f'
+                        formatString: '%.2f',
+                        showGridline: true
                     }
                 }
             },
@@ -111,7 +215,7 @@ $(function() {
             },
             series: [
             { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'filledCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
-            { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'filledDiamond', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} }
+            { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'filledCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} }
             ],
             seriesColors: ["#006CC6","#FF9000"],
             legend: {
@@ -124,22 +228,27 @@ $(function() {
                 },
                 placement: 'outside',
                 location: 's',
-                marginTop: '30px'
+                marginTop: '40px'
             }
         });
         plot4 = $.jqplot('chart-4',[s9,s10],{
+            grid:{
+                borderWidth:0,
+                shadow: false,
+                backgroundColor:'#FFFFFF'
+            },
             seriesDefaults: {
                 renderer:$.jqplot.DonutRenderer,
                 shadow: false,
                 rendererOptions:{
-                    sliceMargin: 1,
-                    dataLabels:'label'
+                    sliceMargin: 1
+                    /**dataLabels:'label'**/
                 }
             },
             seriesColors: ["#FF9000","#006CC6"],
             series:[
-                    {rendererOptions: {diameter: 125, innerDiameter:-25,startAngle: 180}},
-                    {rendererOptions: {diameter: 250, innerDiameter:-125,startAngle: -90, showDataLabels:true}}
+                    {rendererOptions: {diameter: 125, innerDiameter:-25,startAngle: -90}},
+                    {rendererOptions: {diameter: 250, innerDiameter:-125,startAngle: -90}}
                 ],
             legend: {
                 renderer: $.jqplot.EnhancedLegendRenderer,
@@ -150,7 +259,8 @@ $(function() {
                 },
                 placement: 'outside',
                 location: 's',
-                marginTop: '28px'
+                marginTop: '30px'
                     }
         });
+
  });

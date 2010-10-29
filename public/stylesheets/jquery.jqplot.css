@@ -7,14 +7,15 @@
 /*    height: 300px;
     width: 400px;*/
 }
-
 /*rules applied to all axes*/
 .jqplot-axis {
-    font-size: 0.75em;
+    font-size: 1em;
 }
 
 .jqplot-xaxis {
-    margin-top: 10px;
+    margin-top:15px;
+    margin-left:15px;
+    padding-right:10px;
 }
 
 .jqplot-x2axis {
@@ -80,7 +81,8 @@
 }
 .jqplot-xaxis-label {
     margin-top: 10px;
-    font-size: 11pt;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
     position: absolute;
 }
 
@@ -93,7 +95,8 @@
 .jqplot-yaxis-label {
     margin-right: 10px;
 /*    text-align: center;*/
-    font-size: 11pt;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
     position: absolute;
 }
 
@@ -111,14 +114,21 @@ table.jqplot-table-legend {
 }
 
 table.jqplot-table-legend, table.jqplot-cursor-legend {
-    background-color: rgba(255,255,255,0.6);
-    border: 1px solid #cccccc;
+    background-color: #eee;
+    border: 1px solid #CACACA;
     position: absolute;
-    font-size: 0.75em;
+    font-size: 1em;
+    padding-left:5px;
+    padding-right:5px;
+    padding-bottom:2px;
+    padding-top:0px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
+
 
 td.jqplot-table-legend {
     vertical-align:middle;
+    padding-right:3px;
 }
 
 td.jqplot-seriesToggle:hover, td.jqplot-seriesToggle:active {
@@ -151,25 +161,34 @@ div.jqplot-table-legend-swatch {
 }
 
 table.jqplot-cursor-tooltip {
-    border: 1px solid #cccccc;
-    font-size: 0.75em;
+    border: 1px solid #CACACA;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    white-space: nowrap;
+    background-color: #eee;
+    padding: 3px;
+    z-index:999;
 }
 
 
 .jqplot-cursor-tooltip {
-    border: 1px solid #cccccc;
-    font-size: 0.75em;
+    border: 1px solid #CACACA;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
     white-space: nowrap;
-    background: rgba(208,208,208,0.5);
-    padding: 1px;
+    background-color: #eee;
+    padding: 3px;
+    z-index:999;
 }
 
 .jqplot-highlighter-tooltip {
-    border: 1px solid #cccccc;
-    font-size: 0.75em;
+    border: 1px solid #CACACA;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
     white-space: nowrap;
-    background: rgba(208,208,208,0.5);
-    padding: 1px;
+    background-color:#eee;
+    padding: 3px;
+    z-index:999;
 }
 
 .jqplot-point-label {
