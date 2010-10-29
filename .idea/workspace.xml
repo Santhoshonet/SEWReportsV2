@@ -41,7 +41,7 @@
       <file leaf-file-name="reports_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="307" column="34" selection-start="9988" selection-end="9988" vertical-scroll-proportion="0.891455">
+            <state line="315" column="41" selection-start="10247" selection-end="10247" vertical-scroll-proportion="0.75288683">
               <folding />
             </state>
           </provider>
@@ -507,7 +507,7 @@
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -655,7 +655,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="307" column="34" selection-start="9988" selection-end="9988" vertical-scroll-proportion="0.891455">
+        <state line="315" column="41" selection-start="10247" selection-end="10247" vertical-scroll-proportion="0.75288683">
           <folding />
         </state>
       </provider>
