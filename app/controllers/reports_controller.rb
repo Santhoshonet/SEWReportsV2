@@ -44,21 +44,31 @@ class ReportsController < ApplicationController
 
     end
 
+
     # Actual Calculation goes here
     @sum_of_cum_pv =0.00
     @sum_of_cum_actualcost = 0.00
     @sum_of_cum_ev = 0.00
     @sum_of_cum_lresite = 0.00
     @sum_of_cum_lrepmc = 0.00
+
+    @previous_pv_cum = 0.00
+    @previous_lre_site_cum = 0.00
+    @previous_lre_pmc_cum = 0.00
+    
+
     @project_details.each_with_index do |projdetail,index|
 
       currentmonth = DateTime.now.month;
       projmonth = projdetail.month.month;
+      projyear = projdetail.month.year;
+      currentyear = DateTime.now.year;
       # Section of Calculating the basic cummulative values
       begin
           if !projdetail.PlannedValue.nil? and !projdetail.PercentageProgress.nil? and !projdetail.ActualCost.nil?
               @sum_of_cum_pv += projdetail.PlannedValue
-              @sum_of_cum_ev += (@sum_of_all_pv * projdetail.PercentageProgress / 100)
+              result =  @sum_of_cum_pv.to_d * (projdetail.PercentageProgress.to_s.to_d / 100)
+              @sum_of_cum_ev = result
               @sum_of_cum_actualcost += projdetail.ActualCost
           end
           unless projdetail.LRESite.nil?
@@ -67,29 +77,34 @@ class ReportsController < ApplicationController
           unless projdetail.LREPmc.nil?
             @sum_of_cum_lrepmc += projdetail.LREPmc
           end
-      rescue
+      rescue Exception => exc
         puts "Error at generating values for basic cummulative values due to  " + exc.message
       end
 
       # For Graph 1 [Contract budget confidence & Contract re-estimate confidence]
       begin
-          if projmonth <= currentmonth
+          if projmonth <= currentmonth and projyear == currentyear
             if !@contract_budget_confidence.has_key?(projdetail.month.strftime("%Y-%b-1"))
+               
                 cpi = (@sum_of_cum_ev / @sum_of_cum_actualcost)
                 spi = (@sum_of_cum_ev / @sum_of_cum_pv)
 
                 # for contract_budget_confidence
-                result = ((cpi) / ( (@sum_of_all_pv - @sum_of_cum_pv) / (@sum_of_all_pv - @sum_of_cum_actualcost))) * 10
+                result = (@sum_of_all_pv - @sum_of_cum_pv) / (@sum_of_all_pv - @sum_of_cum_actualcost)
+                result = cpi / result
+                result = (result - 1) * 10
                 if result.nan? or result.infinite?
-                  @contract_budget_confidence[projdetail.month.strftime("%Y-%b-1")] = 1
+                  #@contract_budget_confidence[projdetail.month.strftime("%Y-%b-1")] = 1
                 else
                   @contract_budget_confidence[projdetail.month.strftime("%Y-%b-1")] = result
                 end
 
                 # for contract_reestimate_confidence
-                result = ( (cpi) / ( (@sum_of_all_pv - @sum_of_cum_pv) / ( @sum_of_all_lrepmc - @sum_of_cum_actualcost) ) )
+                result =( ( (cpi) / ( (@sum_of_all_pv - @sum_of_cum_pv) / ( @sum_of_all_lrepmc - @sum_of_cum_actualcost) ) ) - 1 ) * 10
+
+                
                 if result.nan? or result.infinite?
-                  @contract_reestimate_confidence[projdetail.month.strftime("%Y-%b-1")] = 1
+                  #@contract_reestimate_confidence[projdetail.month.strftime("%Y-%b-1")] = 1
                 else
                   @contract_reestimate_confidence[projdetail.month.strftime("%Y-%b-1")] = result
                 end
@@ -103,9 +118,22 @@ class ReportsController < ApplicationController
       # For Graph 2 [Estimate Confidence] [LRE Site & LRE PMC]
       begin
           if !@pv_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
-            @pv_cummulative[projdetail.month.strftime("%Y-%b-1")] = @sum_of_cum_pv
-            @lre_site[projdetail.month.strftime("%Y-%b-1")] = @sum_of_cum_lresite
-            @lre_pmc[projdetail.month.strftime("%Y-%b-1")] = @sum_of_cum_lrepmc
+              if @previous_pv_cum != @sum_of_cum_pv
+                @pv_cummulative[projdetail.month.strftime("%Y-%b-1")] = @sum_of_cum_pv
+                @previous_pv_cum = @sum_of_cum_pv
+              end
+          end
+          if !@lre_site.has_key?(projdetail.month.strftime("%Y-%b-1"))
+              if @previous_lre_site_cum != @sum_of_cum_lresite
+                @lre_site[projdetail.month.strftime("%Y-%b-1")] = @sum_of_cum_lresite
+                @previous_lre_site_cum = @sum_of_cum_lresite
+              end
+          end
+          if !@lre_pmc.has_key?(projdetail.month.strftime("%Y-%b-1"))
+              if @previous_lre_pmc_cum != @sum_of_cum_lrepmc
+                @lre_pmc[projdetail.month.strftime("%Y-%b-1")] = @sum_of_cum_lrepmc
+                @previous_lre_pmc_cum = @sum_of_cum_lrepmc
+              end
           end
       rescue Exception => exc
           puts "Error at generating values for Estimate Confidence due to " + exc.message
@@ -114,7 +142,7 @@ class ReportsController < ApplicationController
 
       # For Graph 3 [Cost vs Schedule]
       begin
-        if projmonth <= currentmonth
+        if projmonth < currentmonth   and projyear == currentyear
           cpi = (@sum_of_cum_ev / @sum_of_cum_actualcost)
           spi = (@sum_of_cum_ev / @sum_of_cum_pv)
           if !@cpi_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
@@ -232,8 +260,6 @@ class ReportsController < ApplicationController
 
       # For Issues Analysis
       begin
-          projyear = projdetail.month.year;
-          currentyear = DateTime.now.year;
           if projyear == currentyear
             if currentmonth == projmonth
               # yes it is lastmonth
@@ -277,9 +303,11 @@ class ReportsController < ApplicationController
     # for contract_budget_confidence
     flash[:contract_budget_confidence] = ''
     @contract_budget_confidence.each_with_index do |cbc,index|
-        flash[:contract_budget_confidence] += "#{cbc[0]},#{cbc[1]}"
-        if index < @contract_budget_confidence.length
-          flash[:contract_budget_confidence] += '#'
+        if index < @contract_budget_confidence.length - 1
+          flash[:contract_budget_confidence] += "#{cbc[0]},#{cbc[1]}"
+          if index < @contract_budget_confidence.length
+            flash[:contract_budget_confidence] += '#'
+          end
         end
     end
 
@@ -287,9 +315,11 @@ class ReportsController < ApplicationController
     # for contract_reestimate_confidence
     flash[:contract_reestimate_confidence] = ''
     @contract_reestimate_confidence.each_with_index do |crc,index|
-        flash[:contract_reestimate_confidence] += "#{crc[0]},#{crc[1]}"
-        if index < @contract_budget_confidence.length
-          flash[:contract_reestimate_confidence] += '#'
+        if index < @contract_budget_confidence.length - 1
+          flash[:contract_reestimate_confidence] += "#{crc[0]},#{crc[1]}"
+          if index < @contract_budget_confidence.length
+            flash[:contract_reestimate_confidence] += '#'
+          end
         end
     end
 
@@ -327,9 +357,11 @@ class ReportsController < ApplicationController
     # for cpi cummulative
     flash[:cpi_cummulative] = ''
     @cpi_cummulative.each_with_index do |crc,index|
-        flash[:cpi_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index < @cpi_cummulative.length
-          flash[:cpi_cummulative] += '#'
+        if index < @cpi_cummulative.length - 1
+          flash[:cpi_cummulative] += "#{crc[0]},#{crc[1]}"
+          if index < @cpi_cummulative.length
+            flash[:cpi_cummulative] += '#'
+          end
         end
     end
 
@@ -337,9 +369,11 @@ class ReportsController < ApplicationController
     # for spi cummulative
     flash[:spi_cummulative] = ''
     @spi_cummulative.each_with_index do |crc,index|
-        flash[:spi_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index < @spi_cummulative.length
-          flash[:spi_cummulative] += '#'
+        if index < @spi_cummulative.length - 1        
+          flash[:spi_cummulative] += "#{crc[0]},#{crc[1]}"
+          if index < @spi_cummulative.length
+            flash[:spi_cummulative] += '#'
+          end
         end
     end
 

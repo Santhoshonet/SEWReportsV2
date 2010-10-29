@@ -8,5 +8,5 @@ class ProjDetail < ActiveRecord::Base
 
   validates_numericality_of :PercentageProgress,:PlannedValue,:ActualCost, :LRESite, :LREPmc
 
-  
+
 end

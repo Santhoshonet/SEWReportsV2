@@ -14,27 +14,27 @@ ActiveRecord::Schema.define(:version => 20101028110610) do
   create_table "proj_details", :force => true do |t|
     t.date     "month"
     t.integer  "PercentageProgress"
-    t.decimal  "PlannedValue"
-    t.decimal  "EarnedValue"
-    t.decimal  "ActualCost"
-    t.decimal  "LRESite"
-    t.decimal  "LREPmc"
-    t.decimal  "CPI"
-    t.decimal  "SPI"
-    t.decimal  "MileStoneBilled"
-    t.decimal  "MileStoneUnbilled"
-    t.decimal  "InternalIssues"
-    t.decimal  "ExternalIssues"
-    t.decimal  "QualityIndex"
-    t.decimal  "HSCIndex"
-    t.decimal  "ProcuredAsphant"
-    t.decimal  "BilledAsphant"
-    t.decimal  "ProcuredConcrete"
-    t.decimal  "BilledConcrete"
-    t.decimal  "ProcuredHSteal"
-    t.decimal  "BilledHSteal"
-    t.decimal  "ProcuredRSteal"
-    t.decimal  "BilledRSteal"
+    t.decimal  "PlannedValue",         :precision => 32, :scale => 2
+    t.decimal  "EarnedValue",          :precision => 32, :scale => 2
+    t.decimal  "ActualCost",           :precision => 32, :scale => 2
+    t.decimal  "LRESite",              :precision => 32, :scale => 2
+    t.decimal  "LREPmc",               :precision => 32, :scale => 2
+    t.decimal  "CPI",                  :precision => 32, :scale => 2
+    t.decimal  "SPI",                  :precision => 32, :scale => 2
+    t.integer  "MileStoneBilled"
+    t.integer  "MileStoneUnbilled"
+    t.integer  "InternalIssues"
+    t.integer  "ExternalIssues"
+    t.integer  "QualityIndex"
+    t.integer  "HSCIndex"
+    t.integer  "ProcuredAsphant"
+    t.integer  "BilledAsphant"
+    t.integer  "ProcuredConcrete"
+    t.integer  "BilledConcrete"
+    t.integer  "ProcuredHSteal"
+    t.integer  "BilledHSteal"
+    t.integer  "ProcuredRSteal"
+    t.integer  "BilledRSteal"
     t.integer  "MachineAvailability"
     t.integer  "MachineUsed"
     t.integer  "ManpowerAvailability"
