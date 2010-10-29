@@ -295,7 +295,9 @@ class ReportsController < ApplicationController
 
     end
 
-
+    flash[:minimum] = @lre_minimum
+    flash[:maximum] = @lre_maximum
+    
     # for finding Lre Min & Max
     @lre_minimum = @lre_minimum.to_i
     if @lre_minimum.to_i.to_s.length > 1
