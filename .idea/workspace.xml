@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="37de52f6-3154-4932-910a-4aee5956330b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reports/index.html.erb" afterPath="$PROJECT_DIR$/app/views/reports/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/reports_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/Graph.js" afterPath="$PROJECT_DIR$/public/javascripts/Graph.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/jquery.jqplot.css" afterPath="$PROJECT_DIR$/public/stylesheets/jquery.jqplot.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb" afterPath="$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/proj_detail.rb" afterPath="$PROJECT_DIR$/app/models/proj_detail.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/reports.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/reports.html.erb" />
     </list>
-    <ignored path=".idea/workspace.xml" />
     <ignored path="SEWReportsV3.iws" />
+    <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,28 +37,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reports_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="reports_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="51" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20101028110610_create_proj_details.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="35" selection-start="747" selection-end="747" vertical-scroll-proportion="0.8108108">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="34" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0">
+            <state line="262" column="94" selection-start="8644" selection-end="8644" vertical-scroll-proportion="0.38106236">
               <folding />
             </state>
           </provider>
@@ -59,7 +49,7 @@
       <file leaf-file-name="Graph.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="44" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.0">
+            <state line="68" column="3" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,12 +75,15 @@
         <option value="$PROJECT_DIR$/app/views/proj_details/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/proj_details/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/proj_details/show.html.erb" />
-        <option value="$PROJECT_DIR$/public/javascripts/Graph.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" />
+        <option value="$PROJECT_DIR$/public/javascripts/graphtemp.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/reports.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/reports/index.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb" />
+        <option value="$PROJECT_DIR$/app/models/proj_detail.rb" />
+        <option value="$PROJECT_DIR$/app/views/reports/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
+        <option value="$PROJECT_DIR$/public/javascripts/Graph.js" />
       </list>
     </option>
   </component>
@@ -127,8 +120,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -147,9 +138,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,13 +430,13 @@
       <method />
     </configuration>
     <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: SEWReportsV3" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: SEWReportsV3" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:create:all" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.db:drop:all" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:create:all" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.db:drop:all" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Production: SEWReportsV3" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Development: SEWReportsV3" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -419,15 +458,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.151622" sideWeight="0.6225166" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20662905" sideWeight="0.607947" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36821193" sideWeight="0.998414" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38278145" sideWeight="0.998414" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -469,21 +508,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="51" selection-start="2667" selection-end="2667" vertical-scroll-proportion="1.6048034" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/project_details_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="120" selection-end="120" vertical-scroll-proportion="0.09825327" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/project_details/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="13" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.82798165" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/project_details/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="12" selection-start="1789" selection-end="1789" vertical-scroll-proportion="3.3027523" />
@@ -492,11 +516,6 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/proj_details_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="11" selection-start="111" selection-end="111" vertical-scroll-proportion="0.12362637" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/proj_details/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="22" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0028288544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/proj_details/new.html.erb">
@@ -516,39 +535,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/proj_details.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="337" selection-end="375" vertical-scroll-proportion="0.2625" />
+        <state line="19" column="28" selection-start="668" selection-end="668" vertical-scroll-proportion="0.5026455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/proj_details/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="36" selection-start="1406" selection-end="1420" vertical-scroll-proportion="0.47619048">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/reports.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1577" selection-end="1577" vertical-scroll-proportion="1.2388393" />
+        <state line="23" column="42" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.8028169">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/reports/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/graphtemp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="68" selection-start="316" selection-end="316" vertical-scroll-proportion="0.22198732" />
+        <state line="24" column="0" selection-start="726" selection-end="1508" vertical-scroll-proportion="0.49382716">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/proj_detail.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.46075085">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="34" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/Graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="44" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="51" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0">
+        <state line="38" column="45" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="35" selection-start="747" selection-end="747" vertical-scroll-proportion="0.8108108">
+        <state line="14" column="41" selection-start="740" selection-end="740" vertical-scroll-proportion="0.4964539">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reports/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="51" selection-start="4785" selection-end="4785" vertical-scroll-proportion="-15.272727">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="3" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="262" column="94" selection-start="8644" selection-end="8644" vertical-scroll-proportion="0.38106236">
           <folding />
         </state>
       </provider>
