@@ -2600,3 +2600,33 @@ Processing ReportsController#index (for 127.0.0.1 at 2010-10-29 17:38:06) [GET]
 Rendering template within layouts/reports
 Rendering reports/index
 Completed in 74ms (View: 7, DB: 2) | 200 OK [http://localhost/reports]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-29 17:49:42) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 26ms (View: 6, DB: 2) | 200 OK [http://localhost/reports]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-29 17:51:34) [GET]
+  [4;36;1mProjDetail Load (2.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 28ms (View: 8, DB: 2) | 200 OK [http://localhost/reports]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-10-29 18:01:03) [GET]
+  [4;36;1mProjDetail Load (3.0ms)[0m   [0;1mSELECT * FROM "proj_details" ORDER BY month[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 30ms (View: 8, DB: 3) | 200 OK [http://localhost/reports]

@@ -52,6 +52,8 @@ class ReportsController < ApplicationController
     @sum_of_cum_lrepmc = 0.00
     @project_details.each_with_index do |projdetail,index|
 
+      currentmonth = DateTime.now.month;
+      projmonth = projdetail.month.month;
       # Section of Calculating the basic cummulative values
       begin
           if !projdetail.PlannedValue.nil? and !projdetail.PercentageProgress.nil? and !projdetail.ActualCost.nil?
@@ -71,24 +73,26 @@ class ReportsController < ApplicationController
 
       # For Graph 1 [Contract budget confidence & Contract re-estimate confidence]
       begin
-          if !@contract_budget_confidence.has_key?(projdetail.month.strftime("%Y-%b-1"))
-              cpi = (@sum_of_cum_ev / @sum_of_cum_actualcost)
-              spi = (@sum_of_cum_ev / @sum_of_cum_pv)
+          if projmonth <= currentmonth
+            if !@contract_budget_confidence.has_key?(projdetail.month.strftime("%Y-%b-1"))
+                cpi = (@sum_of_cum_ev / @sum_of_cum_actualcost)
+                spi = (@sum_of_cum_ev / @sum_of_cum_pv)
 
-              # for contract_budget_confidence
-              result = ((cpi) / ( (@sum_of_all_pv - @sum_of_cum_pv) / (@sum_of_all_pv - @sum_of_cum_actualcost))) * 10
-              if result.nan? or result.infinite?
-                @contract_budget_confidence[projdetail.month.strftime("%Y-%b-1")] = 1
-              else
-                @contract_budget_confidence[projdetail.month.strftime("%Y-%b-1")] = result
-              end
+                # for contract_budget_confidence
+                result = ((cpi) / ( (@sum_of_all_pv - @sum_of_cum_pv) / (@sum_of_all_pv - @sum_of_cum_actualcost))) * 10
+                if result.nan? or result.infinite?
+                  @contract_budget_confidence[projdetail.month.strftime("%Y-%b-1")] = 1
+                else
+                  @contract_budget_confidence[projdetail.month.strftime("%Y-%b-1")] = result
+                end
 
-              # for contract_reestimate_confidence
-              result = ( (cpi) / ( (@sum_of_all_pv - @sum_of_cum_pv) / ( @sum_of_all_lrepmc - @sum_of_cum_actualcost) ) )
-              if result.nan? or result.infinite?
-                @contract_reestimate_confidence[projdetail.month.strftime("%Y-%b-1")] = 1
-              else
-                @contract_reestimate_confidence[projdetail.month.strftime("%Y-%b-1")] = result
+                # for contract_reestimate_confidence
+                result = ( (cpi) / ( (@sum_of_all_pv - @sum_of_cum_pv) / ( @sum_of_all_lrepmc - @sum_of_cum_actualcost) ) )
+                if result.nan? or result.infinite?
+                  @contract_reestimate_confidence[projdetail.month.strftime("%Y-%b-1")] = 1
+                else
+                  @contract_reestimate_confidence[projdetail.month.strftime("%Y-%b-1")] = result
+                end
               end
           end
        rescue Exception => exc
@@ -110,6 +114,7 @@ class ReportsController < ApplicationController
 
       # For Graph 3 [Cost vs Schedule]
       begin
+        if projmonth <= currentmonth
           cpi = (@sum_of_cum_ev / @sum_of_cum_actualcost)
           spi = (@sum_of_cum_ev / @sum_of_cum_pv)
           if !@cpi_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
@@ -118,6 +123,7 @@ class ReportsController < ApplicationController
           if !@spi_cummulative.has_key?(projdetail.month.strftime("%Y-%b-1"))
                 @spi_cummulative[projdetail.month.strftime("%Y-%b-1")] = spi
           end
+        end
       rescue Exception => exc
           puts "Error at generating values for Cost Vs Schedule due to " + exc.message
       end
@@ -226,9 +232,7 @@ class ReportsController < ApplicationController
 
       # For Issues Analysis
       begin
-          projmonth = projdetail.month.month;
           projyear = projdetail.month.year;
-          currentmonth = DateTime.now.month;
           currentyear = DateTime.now.year;
           if projyear == currentyear
             if currentmonth == projmonth
@@ -241,7 +245,7 @@ class ReportsController < ApplicationController
               if !projdetail.InternalIssues.nil?
                 extiss = projdetail.InternalIssues
               end
-              flash[:issuelastmonth] = "'External'," + extiss.to_s + "#'Internal'," + intiss.to_s
+              flash[:issuelastmonth] = "External," + extiss.to_s + "#Internal," + intiss.to_s
             elsif projmonth == currentmonth - 1
               # yes it is before to last month
               extiss = 0
@@ -252,7 +256,7 @@ class ReportsController < ApplicationController
               if !projdetail.InternalIssues.nil?
                 extiss = projdetail.InternalIssues
               end
-              flash[:issuelastbeforemonth] = "'External'," + extiss.to_s + "#'Internal'," + intiss.to_s
+              flash[:issuelastbeforemonth] = "External," + extiss.to_s + "#Internal," + intiss.to_s
             end
           end
       rescue Exception => exc
@@ -262,11 +266,11 @@ class ReportsController < ApplicationController
     end
 
     if flash[:issuelastmonth] == ''
-        flash[:issuelastmonth] = "'External',0#'Internal',0"
+        flash[:issuelastmonth] = "External,0#Internal,0"
     end
 
     if flash[:issuelastbeforemonth] == ''
-        flash[:issuelastbeforemonth] == "'External',0#'Internal',0"
+        flash[:issuelastbeforemonth] == "External,0#Internal,0"
     end
 
 
@@ -341,66 +345,40 @@ class ReportsController < ApplicationController
 
 
     # for Asphault usage
-    flash[:asphault_cummulative] = ''
+    flash[:asphault_cummulative] = 0
     @asphault_usage_cummulative.each_with_index do |crc,index|
-        flash[:asphault_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index < @asphault_usage_cummulative.length
-          flash[:asphault_cummulative] += '#'
-        end
+        flash[:asphault_cummulative] += crc[1]
     end
-
 
     # for Concrete usage
-    flash[:concrete_cummulative] = ''
+    flash[:concrete_cummulative] = 0
     @concrete_usage_cummulative.each_with_index do |crc,index|
-        flash[:concrete_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index < @concrete_usage_cummulative.length
-          flash[:concrete_cummulative] += '#'
-        end
+        flash[:concrete_cummulative] += crc[1]
     end
-
 
     # for HSteal usage
-    flash[:hsteel_cummulative] = ''
+    flash[:hsteel_cummulative] = 0
     @hsteel_usage_cummulative.each_with_index do |crc,index|
-        flash[:hsteel_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index < @hsteel_usage_cummulative.length
-          flash[:hsteel_cummulative] += '#'
-        end
+        flash[:hsteel_cummulative] += crc[1]
     end
-
-
 
     # for RSteal usage
-    flash[:rsteel_cummulative] = ''
+    flash[:rsteel_cummulative] = 0
     @rsteel_usage_cummulative.each_with_index do |crc,index|
-        flash[:rsteel_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index < @rsteel_usage_cummulative.length
-          flash[:rsteel_cummulative] += '#'
-        end
+        flash[:rsteel_cummulative] += crc[1]
     end
-
 
     # for Machine usage
-    flash[:machine_usage_cummulative] = ''
+    flash[:machine_usage_cummulative] = 0
     @machine_usage_cummulative.each_with_index do |crc,index|
-        flash[:machine_usage_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index < @machine_usage_cummulative.length
-          flash[:machine_usage_cummulative] += '#'
-        end
+        flash[:machine_usage_cummulative] += crc[1]
     end
-
 
     # for Manpower usage
-    flash[:man_power_usage_cummulative] = ''
+    flash[:man_power_usage_cummulative] = 0
     @manpower_usage_cummulative.each_with_index do |crc,index|
-        flash[:man_power_usage_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index < @manpower_usage_cummulative.length
-          flash[:man_power_usage_cummulative] += '#'
-        end
+        flash[:man_power_usage_cummulative] += crc[1]
     end
-
-
     
   end
 end
