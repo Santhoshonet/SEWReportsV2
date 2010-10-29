@@ -40,7 +40,7 @@
       <file leaf-file-name="reports_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="262" column="94" selection-start="8644" selection-end="8644" vertical-scroll-proportion="0.38106236">
+            <state line="351" column="46" selection-start="11501" selection-end="11501" vertical-scroll-proportion="-0.6974596">
               <folding />
             </state>
           </provider>
@@ -49,7 +49,7 @@
       <file leaf-file-name="Graph.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="3" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0">
+            <state line="64" column="40" selection-start="4461" selection-end="4461" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,8 +82,8 @@
         <option value="$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb" />
         <option value="$PROJECT_DIR$/app/models/proj_detail.rb" />
         <option value="$PROJECT_DIR$/app/views/reports/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
         <option value="$PROJECT_DIR$/public/javascripts/Graph.js" />
+        <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
       </list>
     </option>
   </component>
@@ -598,14 +598,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/Graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="3" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0">
+        <state line="64" column="40" selection-start="4461" selection-end="4461" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="94" selection-start="8644" selection-end="8644" vertical-scroll-proportion="0.38106236">
+        <state line="351" column="46" selection-start="11501" selection-end="11501" vertical-scroll-proportion="-0.6974596">
           <folding />
         </state>
       </provider>
