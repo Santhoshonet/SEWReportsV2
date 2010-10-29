@@ -30,11 +30,22 @@ class ReportsController < ApplicationController
     @sum_of_all_manpower_availability = 0.00
     @sum_of_all_manpower_usage = 0.00
 
+    @lre_maximum = 0
+    @lre_minimum = 0
+
+
     flash[:issuelastmonth] == ''
     flash[:issuelastbeforemonth] == ''
+
+    if @project_details.length > 0
+
+      @lre_minimum = @project_details[0].LREPmc
+      
+    end
     
     # For Calculating all the summary values  here
     @project_details.each do |projdetail|
+
 
       begin
         unless projdetail.PlannedValue.nil? and projdetail.PlannedValue.empty?
@@ -46,6 +57,7 @@ class ReportsController < ApplicationController
       begin
           unless projdetail.LREPmc.nil? and projdetail.empty?
             @sum_of_all_lrepmc += projdetail.LREPmc
+            @lre_maximum = @sum_of_all_lrepmc
           end
       rescue
       end
@@ -282,6 +294,31 @@ class ReportsController < ApplicationController
       end
 
     end
+
+
+    # for finding Lre Min & Max
+    @lre_minimum = @lre_minimum.to_i
+    if @lre_minimum.to_i.to_s.length > 1
+      minimum = @lre_minimum.to_s[0] + @lre_minimum.to_s[1]
+      1.upto(@lre_minimum.to_s.length-2) do
+        minimum += '0'
+      end
+      flash[:lre_minimum] = minimum
+    else
+      flash[:lre_minimum] = 0
+    end
+
+    @lre_maximum = @lre_maximum.to_i
+    if @lre_maximum.to_i.to_s.length > 1
+      maximum = @lre_maximum.to_s[0] + (@lre_maximum.to_s[1].to_i + 1).to_s
+      1.upto(@lre_maximum.to_s.length-2) do
+        maximum += '0'
+      end
+      flash[:lre_maximum] = maximum
+    else
+      flash[:lre_maximum] = 9
+    end
+  
 
     if flash[:issuelastmonth] == ''
         flash[:issuelastmonth] = "External,0#Internal,0"

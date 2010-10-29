@@ -66,7 +66,8 @@ $(function() {
 
         var donuttitle = 'Outer circle ' + $('#donuttitle_outer').html() + ' , Inner circle ' + $('#donuttitle_inner').html();
 
-   
+        var minimumplot3 = parseFloat($('#Lreminimum').html());
+        var maximumplot3 = parseFloat($('#Lremaximum').html());
 
         plot1 = $.jqplot('chart-1', [s1,s2], {
             grid:{
@@ -151,6 +152,8 @@ $(function() {
                     }
                 },
                 yaxis: {
+                    min:minimumplot3,
+                    max:maximumplot3,
                     tickOptions: {
                         formatString: '%.0f',
                         showGridline: true
