@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="37de52f6-3154-4932-910a-4aee5956330b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reports/index.html.erb" afterPath="$PROJECT_DIR$/app/views/reports/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/reports_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/Graph.js" afterPath="$PROJECT_DIR$/public/javascripts/Graph.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/jquery.jqplot.css" afterPath="$PROJECT_DIR$/public/stylesheets/jquery.jqplot.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb" afterPath="$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/reports.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/reports.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/proj_detail.rb" afterPath="$PROJECT_DIR$/app/models/proj_detail.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/proj_details/index.html.erb" afterPath="$PROJECT_DIR$/app/views/proj_details/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/reports.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/reports.html.erb" />
     </list>
     <ignored path="SEWReportsV3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,18 +54,18 @@
         <option value="$PROJECT_DIR$/app/views/project_details/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/project_details/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/proj_details/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/proj_details/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/proj_details/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/proj_details/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" />
         <option value="$PROJECT_DIR$/public/javascripts/graphtemp.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/reports.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb" />
         <option value="$PROJECT_DIR$/app/models/proj_detail.rb" />
-        <option value="$PROJECT_DIR$/app/views/reports/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
         <option value="$PROJECT_DIR$/public/javascripts/Graph.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/reports.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/proj_details/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/reports/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/proj_details.html.erb" />
       </list>
     </option>
   </component>
@@ -160,6 +162,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -201,6 +217,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proj_details" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEWReportsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -553,27 +631,6 @@
         <state line="137" column="19" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.9575672" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/proj_details.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="668" selection-end="668" vertical-scroll-proportion="0.5026455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/proj_details/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="36" selection-start="1406" selection-end="1420" vertical-scroll-proportion="0.47619048">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/reports.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.8028169">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/graphtemp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="726" selection-end="1508" vertical-scroll-proportion="0.49382716">
@@ -595,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="45" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20101028110610_create_proj_details.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="41" selection-start="740" selection-end="740" vertical-scroll-proportion="0.4964539">
@@ -609,23 +659,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="29" selection-start="4562" selection-end="4562" vertical-scroll-proportion="0.5382775">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="351" column="43" selection-start="11498" selection-end="11498" vertical-scroll-proportion="-0.31177828">
+        <state line="351" column="43" selection-start="11498" selection-end="11498" vertical-scroll-proportion="6.443418">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="34" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.4803695">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="46" selection-start="3915" selection-end="3915" vertical-scroll-proportion="0.620438">
+        <state line="67" column="34" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.9270073">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/Graph.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/reports.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="44" selection-start="9053" selection-end="9053" vertical-scroll-proportion="0.861244">
+        <state line="35" column="78" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.52554744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/proj_details.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="32" selection-start="341" selection-end="341" vertical-scroll-proportion="0.25547445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/proj_details/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="12" selection-start="2426" selection-end="2426" vertical-scroll-proportion="2.6277373">
           <folding />
         </state>
       </provider>

@@ -64,7 +64,7 @@ $(function() {
     var s9 = generateArray($('#issuelastmonth').html());  // Last month External & Internal Issues
     var s10= generateArray($('#issuelastbeforemonth').html()); // Last before month External & Internal Issues
 
-        var donuttitle = 'Outter circle ' + $('#donuttitle_outer').html() + ' , Inner circle ' + $('#donuttitle_inner').html();
+        var donuttitle = 'Outer circle ' + $('#donuttitle_outer').html() + ' , Inner circle ' + $('#donuttitle_inner').html();
 
    
 
