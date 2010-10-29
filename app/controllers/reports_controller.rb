@@ -1,3 +1,4 @@
+require 'date'
 class ReportsController < ApplicationController
 
   def index
