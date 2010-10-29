@@ -66,8 +66,37 @@ $(function() {
 
         var donuttitle = 'Outer circle ' + $('#donuttitle_outer').html() + ' , Inner circle ' + $('#donuttitle_inner').html();
 
-        var minimumplot3 = parseFloat($('#Lreminimum').html());
-        var maximumplot3 = parseFloat($('#Lremaximum').html());
+        var minimumplot3 = parseInt($('#Lreminimum').html());
+        var maximumplot3 = parseInt($('#Lremaximum').html());
+
+       
+        if (minimumplot3.toString().length > 1)
+        {
+            var output =  minimumplot3.toString().substr(0,2);
+            for (var i=0; i < minimumplot3.toString().length - 2; i++)
+            {
+                output += "0";
+            }
+            minimumplot3 = parseFloat($.trim(output));
+        }
+        else
+        {
+            minimumplot3 = 0
+        }
+        if (maximumplot3.toString().length > 1)
+        {
+            var out =  maximumplot3.toString().substr(0,1) + (parseInt(maximumplot3.toString().substr(1,1)) + 1).toString();
+            var zeros = '';
+            for (var j=0; j < maximumplot3.toString().length - 2; j++)
+            {
+                zeros += "0";
+            }
+            maximumplot3 = parseFloat($.trim(out + zeros));
+        }
+        else
+        {
+            maximumplot3 = 9
+        }
 
         plot1 = $.jqplot('chart-1', [s1,s2], {
             grid:{

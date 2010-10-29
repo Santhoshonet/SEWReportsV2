@@ -295,9 +295,8 @@ class ReportsController < ApplicationController
 
     end
 
-    flash[:minimum] = @lre_minimum
-    flash[:maximum] = @lre_maximum
-    
+
+=begin
     # for finding Lre Min & Max
     @lre_minimum = @lre_minimum.to_i
     if @lre_minimum.to_i.to_s.length > 1
@@ -320,8 +319,11 @@ class ReportsController < ApplicationController
     else
       flash[:lre_maximum] = 9
     end
-  
+=end
 
+    flash[:lre_maximum] = @lre_maximum
+    flash[:lre_minimum] = @lre_minimum
+    
     if flash[:issuelastmonth] == ''
         flash[:issuelastmonth] = "External,0#Internal,0"
     end
