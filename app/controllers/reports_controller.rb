@@ -21,6 +21,10 @@ class ReportsController < ApplicationController
 
     @sum_of_all_pv = 0.00
     @sum_of_all_lrepmc = 0.00
+
+    flash[:issuelastmonth] == ''
+    flash[:issuelastbeforemonth] == ''
+    
     # For Calculating all the summary values  here
     @project_details.each do |projdetail|
 
@@ -46,7 +50,6 @@ class ReportsController < ApplicationController
     @sum_of_cum_ev = 0.00
     @sum_of_cum_lresite = 0.00
     @sum_of_cum_lrepmc = 0.00
-
     @project_details.each_with_index do |projdetail,index|
 
       # Section of Calculating the basic cummulative values
@@ -223,28 +226,34 @@ class ReportsController < ApplicationController
 
       # For Issues Analysis
       begin
-          if index == @project_details.length - 1
-            # yes it is lastmonth
-            extiss = 0
-            if !projdetail.ExternalIssues.nil?
-              extiss = projdetail.ExternalIssues
+          projmonth = projdetail.month.month;
+          projyear = projdetail.month.year;
+          currentmonth = DateTime.now.month;
+          currentyear = DateTime.now.year;
+          if projyear == currentyear
+            if currentmonth == projmonth
+              # yes it is lastmonth
+              extiss = 0
+              if !projdetail.ExternalIssues.nil?
+                extiss = projdetail.ExternalIssues
+              end
+              intiss = 0
+              if !projdetail.InternalIssues.nil?
+                extiss = projdetail.InternalIssues
+              end
+              flash[:issuelastmonth] = "'External'," + extiss.to_s + "#'Internal'," + intiss.to_s
+            elsif projmonth == currentmonth - 1
+              # yes it is before to last month
+              extiss = 0
+              if !projdetail.ExternalIssues.nil?
+                extiss = projdetail.ExternalIssues
+              end
+              intiss = 0
+              if !projdetail.InternalIssues.nil?
+                extiss = projdetail.InternalIssues
+              end
+              flash[:issuelastbeforemonth] = "'External'," + extiss.to_s + "#'Internal'," + intiss.to_s
             end
-            intiss = 0
-            if !projdetail.InternalIssues.nil?
-              extiss = projdetail.InternalIssues
-            end
-            flash[:issuelastmonth] = "'External'," + extiss.to_s + "#'Internal'," + intiss.to_s
-          elsif index == @project_details.length - 2
-            # yes it is before to last month
-            extiss = 0
-            if !projdetail.ExternalIssues.nil?
-              extiss = projdetail.ExternalIssues
-            end
-            intiss = 0
-            if !projdetail.InternalIssues.nil?
-              extiss = projdetail.InternalIssues
-            end
-            flash[:issuelastbeforemonth] = "'External'," + extiss.to_s + "#'Internal'," + intiss.to_s
           end
       rescue Exception => exc
         puts "Error at generating values for Issue Analysis due to " + exc.message
@@ -252,11 +261,20 @@ class ReportsController < ApplicationController
 
     end
 
+    if flash[:issuelastmonth] == ''
+        flash[:issuelastmonth] = "'External',0#'Internal',0"
+    end
+
+    if flash[:issuelastbeforemonth] == ''
+        flash[:issuelastbeforemonth] == "'External',0#'Internal',0"
+    end
+
+
     # for contract_budget_confidence
     flash[:contract_budget_confidence] = ''
     @contract_budget_confidence.each_with_index do |cbc,index|
         flash[:contract_budget_confidence] += "#{cbc[0]},#{cbc[1]}"
-        if index != 0 and index < @contract_budget_confidence.length
+        if index < @contract_budget_confidence.length
           flash[:contract_budget_confidence] += '#'
         end
     end
@@ -266,7 +284,7 @@ class ReportsController < ApplicationController
     flash[:contract_reestimate_confidence] = ''
     @contract_reestimate_confidence.each_with_index do |crc,index|
         flash[:contract_reestimate_confidence] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @contract_budget_confidence.length
+        if index < @contract_budget_confidence.length
           flash[:contract_reestimate_confidence] += '#'
         end
     end
@@ -276,7 +294,7 @@ class ReportsController < ApplicationController
     flash[:pv_cummulative] = ''
     @pv_cummulative.each_with_index do |crc,index|
         flash[:pv_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @pv_cummulative.length
+        if index < @pv_cummulative.length
           flash[:pv_cummulative] += '#'
         end
     end
@@ -286,7 +304,7 @@ class ReportsController < ApplicationController
     flash[:lresite_cummulative] = ''
     @lre_site.each_with_index do |crc,index|
         flash[:lresite_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @lre_site.length
+        if index < @lre_site.length
           flash[:lresite_cummulative] += '#'
         end
     end
@@ -296,7 +314,7 @@ class ReportsController < ApplicationController
     flash[:lrepmc_cummulative] = ''
     @lre_pmc.each_with_index do |crc,index|
         flash[:lrepmc_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @lre_pmc.length
+        if index < @lre_pmc.length
           flash[:lrepmc_cummulative] += '#'
         end
     end
@@ -306,7 +324,7 @@ class ReportsController < ApplicationController
     flash[:cpi_cummulative] = ''
     @cpi_cummulative.each_with_index do |crc,index|
         flash[:cpi_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @cpi_cummulative.length
+        if index < @cpi_cummulative.length
           flash[:cpi_cummulative] += '#'
         end
     end
@@ -316,7 +334,7 @@ class ReportsController < ApplicationController
     flash[:spi_cummulative] = ''
     @spi_cummulative.each_with_index do |crc,index|
         flash[:spi_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @spi_cummulative.length
+        if index < @spi_cummulative.length
           flash[:spi_cummulative] += '#'
         end
     end
@@ -326,7 +344,7 @@ class ReportsController < ApplicationController
     flash[:asphault_cummulative] = ''
     @asphault_usage_cummulative.each_with_index do |crc,index|
         flash[:asphault_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @asphault_usage_cummulative.length
+        if index < @asphault_usage_cummulative.length
           flash[:asphault_cummulative] += '#'
         end
     end
@@ -336,7 +354,7 @@ class ReportsController < ApplicationController
     flash[:concrete_cummulative] = ''
     @concrete_usage_cummulative.each_with_index do |crc,index|
         flash[:concrete_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @concrete_usage_cummulative.length
+        if index < @concrete_usage_cummulative.length
           flash[:concrete_cummulative] += '#'
         end
     end
@@ -346,7 +364,7 @@ class ReportsController < ApplicationController
     flash[:hsteel_cummulative] = ''
     @hsteel_usage_cummulative.each_with_index do |crc,index|
         flash[:hsteel_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @hsteel_usage_cummulative.length
+        if index < @hsteel_usage_cummulative.length
           flash[:hsteel_cummulative] += '#'
         end
     end
@@ -357,7 +375,7 @@ class ReportsController < ApplicationController
     flash[:rsteel_cummulative] = ''
     @rsteel_usage_cummulative.each_with_index do |crc,index|
         flash[:rsteel_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @rsteel_usage_cummulative.length
+        if index < @rsteel_usage_cummulative.length
           flash[:rsteel_cummulative] += '#'
         end
     end
@@ -367,7 +385,7 @@ class ReportsController < ApplicationController
     flash[:machine_usage_cummulative] = ''
     @machine_usage_cummulative.each_with_index do |crc,index|
         flash[:machine_usage_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @machine_usage_cummulative.length
+        if index < @machine_usage_cummulative.length
           flash[:machine_usage_cummulative] += '#'
         end
     end
@@ -377,7 +395,7 @@ class ReportsController < ApplicationController
     flash[:man_power_usage_cummulative] = ''
     @manpower_usage_cummulative.each_with_index do |crc,index|
         flash[:man_power_usage_cummulative] += "#{crc[0]},#{crc[1]}"
-        if index != 0 and index < @manpower_usage_cummulative.length
+        if index < @manpower_usage_cummulative.length
           flash[:man_power_usage_cummulative] += '#'
         end
     end

@@ -6,15 +6,19 @@ $(function() {
             var split = str.split('#');
             var array = new Array(split.length);
             for (var i = 0; i < split.length; i++) {
-                array[i] = new Array(2);
-                var split2 = split[i].split(",");
-                if (split2.length > 1) {
-                    array[i][0] = split2[0];
-                    array[i][1] = split2[1];
-                }
-                else {
-                    array[i][0] = null;
-                    array[i][1] = null;
+                split[i] = $.trim(split[i]);
+                if(split[i] != null && split[i] != "")
+                {
+                    array[i] = new Array(2);
+                    var split2 = split[i].split(",");
+                    if (split2.length > 1) {
+                        array[i][0] = $.trim(split2[0]);
+                        array[i][1] = parseFloat($.trim(split2[1]),2);
+                    }
+                    else {
+                        array[i][0] = 0;
+                        array[i][1] = 0;
+                    }
                 }
             }
             return array;
@@ -22,6 +26,9 @@ $(function() {
         else
         {
             var array = new Array(1);
+            array[0] = new Array(2);
+            array[0][0] = 0;
+            array[0][1] = 0;
             return array;
         }
     };
@@ -56,7 +63,8 @@ $(function() {
     var s8 = generateArray($('#spi_cummulative').html());  // SPI Cummulative
     var s9 = generateArray($('#issuelastmonth').html());  // Last month External & Internal Issues
     var s10= generateArray($('#issuelastbeforemonth').html()); // Last before month External & Internal Issues
-    
+
+
 
         plot1 = $.jqplot('chart-1', [s1,s2], {
             grid:{
