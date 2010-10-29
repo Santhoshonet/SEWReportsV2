@@ -260,7 +260,7 @@ class ReportsController < ApplicationController
               if !projdetail.InternalIssues.nil?
                 intiss = projdetail.InternalIssues
               end
-              flash[:issuelastmonth] = "External," + extiss.to_s + "#Internal," + intiss.to_s
+              flash[:issuelastbeforemonth] = "External," + extiss.to_s + "#Internal," + intiss.to_s
               flash[:donuttitle_outer] = projdetail.month.strftime('%b-%Y') 
             elsif projmonth == currentmonth - 2
               # yes it is before to last month
@@ -272,7 +272,7 @@ class ReportsController < ApplicationController
               if !projdetail.InternalIssues.nil?
                 intiss = projdetail.InternalIssues
               end
-              flash[:issuelastbeforemonth] = "External," + extiss.to_s + "#Internal," + intiss.to_s
+              flash[:issuelastmonth] = "External," + extiss.to_s + "#Internal," + intiss.to_s
               flash[:donuttitle_inner] = projdetail.month.strftime('%b-%Y')
             end
           end

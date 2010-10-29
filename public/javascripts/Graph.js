@@ -66,6 +66,7 @@ $(function() {
 
         var donuttitle = 'Outter circle ' + $('#donuttitle_outer').html() + ' , Inner circle ' + $('#donuttitle_inner').html();
 
+   
 
         plot1 = $.jqplot('chart-1', [s1,s2], {
             grid:{
