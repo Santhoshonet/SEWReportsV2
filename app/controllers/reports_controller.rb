@@ -310,7 +310,7 @@ class ReportsController < ApplicationController
 
     @lre_maximum = @lre_maximum.to_i
     if @lre_maximum.to_i.to_s.length > 1
-      maximum = @lre_maximum.to_s[0] + (@lre_maximum.to_s[1].to_i + 1).to_s
+      maximum = @lre_maximum.to_s[0].to_s + (@lre_maximum.to_s[1].to_i + 1).to_s
       1.upto(@lre_maximum.to_s.length-2) do
         maximum = maximum.to_s + '0'.to_s
       end
