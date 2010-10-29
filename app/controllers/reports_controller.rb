@@ -301,7 +301,7 @@ class ReportsController < ApplicationController
     if @lre_minimum.to_i.to_s.length > 1
       minimum = @lre_minimum.to_s[0] + @lre_minimum.to_s[1]
       1.upto(@lre_minimum.to_s.length-2) do
-        minimum += '0'
+        minimum = minimum.to_s + '0'.to_s
       end
       flash[:lre_minimum] = minimum
     else
