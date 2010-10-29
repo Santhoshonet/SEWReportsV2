@@ -295,7 +295,7 @@ class ReportsController < ApplicationController
     # for contract_budget_confidence
     flash[:contract_budget_confidence] = ''
     @contract_budget_confidence.each_with_index do |cbc,index|
-        if index < @contract_budget_confidence.length - 1
+        if index < @contract_budget_confidence.length
           flash[:contract_budget_confidence] += "#{cbc[0]},#{cbc[1]}"
           if index < @contract_budget_confidence.length
             flash[:contract_budget_confidence] += '#'
@@ -307,9 +307,9 @@ class ReportsController < ApplicationController
     # for contract_reestimate_confidence
     flash[:contract_reestimate_confidence] = ''
     @contract_reestimate_confidence.each_with_index do |crc,index|
-        if index < @contract_budget_confidence.length - 1
+        if index < @contract_reestimate_confidence.length
           flash[:contract_reestimate_confidence] += "#{crc[0]},#{crc[1]}"
-          if index < @contract_budget_confidence.length
+          if index < @contract_reestimate_confidence.length
             flash[:contract_reestimate_confidence] += '#'
           end
         end
@@ -349,7 +349,7 @@ class ReportsController < ApplicationController
     # for cpi cummulative
     flash[:cpi_cummulative] = ''
     @cpi_cummulative.each_with_index do |crc,index|
-        if index < @cpi_cummulative.length - 1
+        if index < @cpi_cummulative.length 
           flash[:cpi_cummulative] += "#{crc[0]},#{crc[1]}"
           if index < @cpi_cummulative.length
             flash[:cpi_cummulative] += '#'
@@ -361,7 +361,7 @@ class ReportsController < ApplicationController
     # for spi cummulative
     flash[:spi_cummulative] = ''
     @spi_cummulative.each_with_index do |crc,index|
-        if index < @spi_cummulative.length - 1
+        if index < @spi_cummulative.length
           flash[:spi_cummulative] += "#{crc[0]},#{crc[1]}"
           if index < @spi_cummulative.length
             flash[:spi_cummulative] += '#'

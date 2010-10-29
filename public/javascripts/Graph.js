@@ -175,7 +175,7 @@ $(function() {
                 renderer: $.jqplot.EnhancedLegendRenderer,
                 show: true,
                 showSwatches: true,
-                labels: ['PV Cum', 'LRE Contractor', 'LRE PMC'],
+                labels: ['PV Cum', 'LRE Site', 'LRE PMC'],
                 rendererOptions: {
                     numberRows: 1
                 },
